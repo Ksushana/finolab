@@ -1,0 +1,26 @@
+.intro {
+  background-color: $color-bg-blue;
+  display: flex;
+  flex-direction: column;
+  padding: 72px 3% 54px;
+
+  svg {
+    width: 97%;
+    height: auto;
+    margin: 0 auto 32px;
+  }
+
+  h2 {
+    font-size: 27px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.8px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+  }
+}

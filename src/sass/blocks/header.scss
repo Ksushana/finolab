@@ -1,0 +1,18 @@
+.header {
+  padding: 27px 3.9% 21px;
+  display: flex;
+
+  svg {
+    margin-right: auto;
+  }
+}
+
+.header__link {
+  margin-left: 51px;
+  padding-top: 3px;
+
+  svg {
+    width: 20px;
+    height: 24px;
+  }
+}

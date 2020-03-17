@@ -1,0 +1,111 @@
+.service {
+  background-color: $color-bg-blue;
+  display: flex;
+  flex-direction: column;
+  padding: 29px 0;
+
+  svg {
+    width: 93.5%;
+    height: auto;
+    margin: 0 auto 3px;
+  }
+}
+
+.service__header {
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.service__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.service__text-block {
+  margin: 24px 4%;
+
+  h2 {
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: -0.8px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    margin-top: 18px;
+  }
+}
+
+.service__slider {
+  margin-top: 4px;
+
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    margin-top: 12px;
+    margin-bottom: 9px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 9px;
+  }
+
+  .service__pic {
+    height: 42px;
+  }
+
+  svg {
+    width: 40px;
+    height: auto;
+  }
+
+  .swiper-slide {
+    width: 325px;
+    padding-left: 17px;
+  }
+
+  .swiper-slide:first-child {
+    svg {
+      width: 27px;
+      height: 40px;
+    }
+  }
+}
+
+.service__pic {
+  height: 40px;
+
+  &--tick {
+    svg {
+      width: 27px;
+      height: 40px;
+    }
+  }
+
+  &--tag {
+    svg {
+      width: 46px;
+      height: 41px;
+    }
+  }
+
+  &--list {
+    svg {
+      width: 40px;
+      height: 32px;
+    }
+  }
+
+  &--graphic {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.team {
+  padding: 72px 0 36px;
+  display: flex;
+  flex-direction: column;
+
+  svg {
+    width: 93%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.team__text-block {
+  margin: 24px 4%;
+
+  h2 {
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: -0.8px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    margin-top: 18px;
+  }
+}

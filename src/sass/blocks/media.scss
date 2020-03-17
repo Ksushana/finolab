@@ -1,0 +1,50 @@
+.media {
+  padding-top: 17px;
+  h2 {
+    font-size: 31px;
+    line-height: 37px;
+    text-align: center;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    width: 305px;
+
+    p {
+      background: #ffffff;
+      border: 0.5px solid #f5f5f5;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 15px 16px;
+      position: relative;
+      z-index: 2;
+      background-color: $color-white;
+      min-height: 176px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./../img/speech.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        width: 20px;
+        height: 30px;
+        bottom: -17px;
+      }
+    }
+
+    img,
+    svg {
+      margin-left: 15px;
+      margin-top: 10px;
+    }
+  }
+}
