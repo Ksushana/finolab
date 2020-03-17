@@ -15,15 +15,9 @@
       spaceBetween: 7,
       breakpoints: {
         768: {
-          spaceBetween: 36,
-          loop: false,
-          centeredSlides: true
+          spaceBetween: 0
         },
-        1200: {
-          slidesPerColumn: 1,
-          spaceBetween: 30,
-          loop: true
-        }
+        1200: {}
       }
     });
   }
@@ -45,16 +39,8 @@
       slidesPerView: "auto",
       spaceBetween: 17,
       breakpoints: {
-        768: {
-          spaceBetween: 36,
-          loop: false,
-          centeredSlides: true
-        },
-        1200: {
-          slidesPerColumn: 1,
-          spaceBetween: 30,
-          loop: true
-        }
+        768: {},
+        1200: {}
       }
     });
   }
@@ -72,18 +58,9 @@
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
-      spaceBetween: 15,
+      spaceBetween: 16,
       breakpoints: {
-        768: {
-          spaceBetween: 36,
-          loop: false,
-          centeredSlides: true
-        },
-        1200: {
-          slidesPerColumn: 1,
-          spaceBetween: 30,
-          loop: true
-        }
+        768: {}
       }
     });
   }

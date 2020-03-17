@@ -1,0 +1,18 @@
+.footer {
+  background-color: $color-bg-grey;
+  padding: 29px 3.5% 70px;
+  text-align: center;
+  color: $color-white;
+  font-size: 15px;
+  line-height: 30px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 29px 5% 70px 6%;
+  }
+
+  p {
+    margin: 0;
+  }
+}

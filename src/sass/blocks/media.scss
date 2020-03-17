@@ -1,5 +1,11 @@
 .media {
   padding-top: 17px;
+  padding-bottom: 50px;
+
+  @include tablet {
+    padding-top: 4px;
+  }
+
   h2 {
     font-size: 31px;
     line-height: 37px;
@@ -27,6 +33,9 @@
       font-size: 16px;
       line-height: 24px;
       margin-left: 15px;
+      text-overflow: ellipsis;
+      min-height: 195px;
+      max-height: 195px;
 
       &::before {
         content: "";

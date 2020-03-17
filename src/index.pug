@@ -12,12 +12,13 @@ html( lang="ru" )
     link( rel="preload" href="fonts/ApercuBold.woff2" as="font" type="font/woff2" crossorigin )
     link( rel="preload" href="fonts/ApercuRegular.woff2" as="font" type="font/woff2" crossorigin )
     link( rel="stylesheet" href="css/style.min.css" )
+    script( src="https://api-maps.yandex.ru/2.1/?apikey=58263f1b-71c0-4f82-aad7-91a563964fa9&lang=ru_RU" type="text/javascript" )
 
   body
     header.header
       +svg( "logo", 144, 24 )
       +link-text( "Вакансии", "vacancies.html", "header__link" )
-      a.header__link(href="#")
+      a.header__link.header__link--phone(href="#") Связаться с нами
         +svg( "phone", 24, 27 )
 
     main
@@ -26,8 +27,9 @@ html( lang="ru" )
 
         section.intro
           +svg( "intro", 874, 415 )
-          h2.intro__header Современные комплексные решения в сфере финансовых технологий
-          p.intro__text Наш бизнес — проектирование, разработка, внедрение и сопровождение информационных систем для финансово технологических компаний.
+          .intro__block
+            h2.intro__header Современные комплексные решения в сфере финансовых технологий
+            p.intro__text Наш бизнес — проектирование, разработка, внедрение и сопровождение информационных систем для финансово технологических компаний.
 
         section.team
           +svg( "team", 444, 418 )
@@ -194,12 +196,13 @@ html( lang="ru" )
                   img( src="img/rbk@2x.png" width="73" height="20")
 
         section.location
+          div( id="map" style="width: 100%; height: 648px" )
 
-          .location__address
-            h2 Финолаб.ру
-            a() г. Москва, ул. Шарикоподшипниковская, д. 17
-            a() +7 495 387-42-35
-            a() hello@finolab.ru
+          //- .location__address
+          //-   h2 Финолаб.ру
+          //-   a() г. Москва, ул. Шарикfffffffffоподшипниковская, д. 17
+          //-   a(  href="tel:+74953874235" ) +7 495 387-42-35
+          //-   a( href="mailto:hello@finolab.ru" ) hello@finolab.ru
 
           .location__form
             form
@@ -211,7 +214,7 @@ html( lang="ru" )
                 input( name="tel" type="tel" class="location__input location__input--tel" placeholder="Телефон" )
               .location__input-wrapper
                 textarea( name="message" type="text" rows="3" class="location__input location__input--message" placeholder="Сообщение" )
-              button( class="location__button" type="submit" ) Отправить
+              button( class="location__button button" type="submit" ) Отправить
 
 
 

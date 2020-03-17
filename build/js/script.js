@@ -10309,6 +10309,61 @@ $(function() {
   });
 });
 
+(ymaps => {
+  function init() {
+    const mobileCenter = [55.815332, 37.679853];
+    const desktopCenter = [55.815332, 37.679853];
+    const myMap = new ymaps.Map("map", {
+      center: window.isMobile() ? mobileCenter : desktopCenter,
+      zoom: 9,
+      controls: []
+    });
+
+    const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(`
+      <div class="location__address">
+        <h2>Финолаб.ру</h2>
+        <a>г. Москва, ул. Шарикfffffffffоподшипниковская, д. 17</a>
+        <a href="tel:+74953874235">+7 495 387-42-35</a>
+        <a href="mailto:hello@finolab.ru">hello@finolab.ru</a>
+      </div>
+    `);
+
+    const myPlacemarkWithContent = new ymaps.Placemark(
+      [55.715332, 37.679853],
+      {},
+      {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: "default#imageWithContent",
+        // Своё изображение иконки метки.
+        // iconImageHref: "images/ball.png",
+        // Размеры метки.
+        iconImageSize: [48, 48],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-24, -24],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [15, 15],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+      }
+    );
+
+    myMap.geoObjects.add(myPlacemarkWithContent).add(myPlacemarkWithContent);
+    myMap.behaviors.disable([
+      "drag",
+      "scrollZoom",
+      "dblClickZoom",
+      "multiTouch",
+      "rightMouseButtonMagnifier",
+      "leftMouseButtonMagnifier",
+      "ruler"
+    ]);
+  }
+
+  ymaps.ready(init);
+})(window.ymaps);
+
 (function() {
   var serviceSlider = document.querySelector(
     ".service__slider .swiper-container"
@@ -10326,15 +10381,9 @@ $(function() {
       spaceBetween: 7,
       breakpoints: {
         768: {
-          spaceBetween: 36,
-          loop: false,
-          centeredSlides: true
+          spaceBetween: 0
         },
-        1200: {
-          slidesPerColumn: 1,
-          spaceBetween: 30,
-          loop: true
-        }
+        1200: {}
       }
     });
   }
@@ -10356,16 +10405,8 @@ $(function() {
       slidesPerView: "auto",
       spaceBetween: 17,
       breakpoints: {
-        768: {
-          spaceBetween: 36,
-          loop: false,
-          centeredSlides: true
-        },
-        1200: {
-          slidesPerColumn: 1,
-          spaceBetween: 30,
-          loop: true
-        }
+        768: {},
+        1200: {}
       }
     });
   }
@@ -10383,18 +10424,9 @@ $(function() {
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
-      spaceBetween: 15,
+      spaceBetween: 16,
       breakpoints: {
-        768: {
-          spaceBetween: 36,
-          loop: false,
-          centeredSlides: true
-        },
-        1200: {
-          slidesPerColumn: 1,
-          spaceBetween: 30,
-          loop: true
-        }
+        768: {}
       }
     });
   }

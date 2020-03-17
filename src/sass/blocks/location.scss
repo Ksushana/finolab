@@ -1,0 +1,121 @@
+.location {
+  position: relative;
+  padding-bottom: 74px;
+
+  @include tablet {
+    padding-bottom: 85px;
+  }
+}
+
+.location__address {
+  position: absolute;
+  width: 382px;
+  transform: translate(-50%, 0);
+  left: 50%;
+  min-height: 194px;
+  top: 0;
+  background-color: $color-white;
+  border: 0.5px solid #f5f5f5;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 24px;
+  letter-spacing: -0.4px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: $color-white;
+    bottom: -6px;
+    left: 181px;
+  }
+
+  h2 {
+    font-size: 19px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 7px;
+
+    &:last-child {
+      color: $color-bg-blue-bright;
+    }
+  }
+}
+
+.location__form {
+  padding-top: 37px;
+
+  @include tablet {
+    padding-top: 52px;
+  }
+  h2 {
+    font-size: 25px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 3.5% 23px;
+    letter-spacing: -0.1px;
+
+    @include tablet {
+      text-align: center;
+      width: 66%;
+      margin: 0 auto 15px;
+    }
+  }
+
+  input,
+  textarea {
+    margin: 8px 3.5%;
+    width: 93%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: none;
+
+    @include tablet {
+      margin: 8px 5%;
+      width: 90%;
+    }
+
+    &::placeholder {
+      color: blue;
+      font-size: 1.5em;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000000;
+      opacity: 0.4;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .location__button {
+    margin: 4px 3.5%;
+    width: 93%;
+
+    @include tablet {
+      margin: 3px 5%;
+      width: 90%;
+    }
+  }
+}

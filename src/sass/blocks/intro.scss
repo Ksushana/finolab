@@ -4,10 +4,20 @@
   flex-direction: column;
   padding: 72px 3% 54px;
 
+  @include tablet {
+    padding: 64px 3% 0;
+  }
+
   svg {
     width: 97%;
     height: auto;
     margin: 0 auto 32px;
+
+    @include tablet {
+      width: 96%;
+      order: 3;
+      margin: 60px auto 0;
+    }
   }
 
   h2 {
@@ -16,11 +26,21 @@
     text-align: center;
     letter-spacing: -0.8px;
     margin-bottom: 6px;
+
+    @include tablet {
+      width: 68%;
+      margin: 0 auto;
+      margin-bottom: 0;
+    }
   }
 
   p {
     font-size: 20px;
     line-height: 26px;
     text-align: center;
+
+    @include tablet {
+      margin-top: 26px;
+    }
   }
 }
