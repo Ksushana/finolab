@@ -2548,7 +2548,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100vh;
   font-size: 20px;
   line-height: 24px;
   font-family: "Apercu-Regular", "Arial", sans-serif;
@@ -4065,7 +4064,7 @@ a:not([href]) {
 
 @media (min-width: 1280px) {
   .popup {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(21, 26, 52, 0.8);
     z-index: 100000;
   }
 }
