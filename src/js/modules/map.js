@@ -27,7 +27,7 @@
     const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(`
       <div class="location__address">
         <h2>Финолаб.ру</h2>
-        <a>г. Москва, ул. Шарикоподшипниковская, д. 17</a>
+        <a>г. Москва, ул.Шарикоподшипниковская,д.17</a>
         <a href="tel:+74953874235">+7 495 387-42-35</a>
         <a href="mailto:hello@finolab.ru">hello@finolab.ru</a>
       </div>

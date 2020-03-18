@@ -10343,7 +10343,7 @@ $(function() {
     const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(`
       <div class="location__address">
         <h2>Финолаб.ру</h2>
-        <a>г. Москва, ул. Шарикоподшипниковская, д. 17</a>
+        <a>г. Москва, ул.Шарикоподшипниковская,д.17</a>
         <a href="tel:+74953874235">+7 495 387-42-35</a>
         <a href="mailto:hello@finolab.ru">hello@finolab.ru</a>
       </div>
@@ -10430,6 +10430,10 @@ $(function() {
 
   const copySlidesContent = () => {
     popupContainer.innerHTML = mainContainer.innerHTML;
+    const popupSlides = popupContainer.querySelectorAll(".swiper-slide");
+    popupSlides.forEach(slide => {
+      slide.classList.add("swiper-slide--popup");
+    });
   };
 
   const openPopup = index => {
@@ -10437,7 +10441,7 @@ $(function() {
     initSwiper();
     popupSwiper.slideTo(index, 0);
     // $('body').css("overflow-y", "hidden");
-    // window.bodyScrollLock.disableBodyScroll(popup);
+    window.bodyScrollLock.disableBodyScroll(popup);
   };
 
   const closePopup = () => {
@@ -10448,13 +10452,19 @@ $(function() {
   };
 
   copySlidesContent();
-
-  mainSlides.forEach((mainSlide, index) => {
-    mainSlide.addEventListener("click", () => {
-      openPopup(index + 1);
-    });
+  document.addEventListener("click", evt => {
+    if (!evt.target || !evt.target.parentNode) {
+      return;
+    }
+    const parent = evt.target.parentNode;
+    if (
+      parent.classList.contains("swiper-slide") &&
+      !parent.classList.contains("swiper-slide--popup")
+    ) {
+      const id = parseInt(parent.dataset.slideId, 10);
+      openPopup(id);
+    }
   });
-
   close.addEventListener("click", () => {
     closePopup();
   });

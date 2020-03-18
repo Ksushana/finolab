@@ -3647,7 +3647,7 @@ a:not([href]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 8px 24px;
+  padding: 8px 50px 8px 24px;
   letter-spacing: -0.4px;
   text-align: left;
 }

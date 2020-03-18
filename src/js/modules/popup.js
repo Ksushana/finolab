@@ -43,6 +43,10 @@
 
   const copySlidesContent = () => {
     popupContainer.innerHTML = mainContainer.innerHTML;
+    const popupSlides = popupContainer.querySelectorAll(".swiper-slide");
+    popupSlides.forEach(slide => {
+      slide.classList.add("swiper-slide--popup");
+    });
   };
 
   const openPopup = index => {
@@ -50,7 +54,7 @@
     initSwiper();
     popupSwiper.slideTo(index, 0);
     // $('body').css("overflow-y", "hidden");
-    // window.bodyScrollLock.disableBodyScroll(popup);
+    window.bodyScrollLock.disableBodyScroll(popup);
   };
 
   const closePopup = () => {
@@ -61,13 +65,19 @@
   };
 
   copySlidesContent();
-
-  mainSlides.forEach((mainSlide, index) => {
-    mainSlide.addEventListener("click", () => {
-      openPopup(index + 1);
-    });
+  document.addEventListener("click", evt => {
+    if (!evt.target || !evt.target.parentNode) {
+      return;
+    }
+    const parent = evt.target.parentNode;
+    if (
+      parent.classList.contains("swiper-slide") &&
+      !parent.classList.contains("swiper-slide--popup")
+    ) {
+      const id = parseInt(parent.dataset.slideId, 10);
+      openPopup(id);
+    }
   });
-
   close.addEventListener("click", () => {
     closePopup();
   });
