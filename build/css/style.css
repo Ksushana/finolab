@@ -1609,16 +1609,19 @@ img.mfp-img {
   cursor: pointer;
   position: relative;
   margin: 20px 3% 0;
-  padding: 28px 4.5% 27px 4.5%;
+  padding: 28px 7.5% 27px 4.5%;
   font-size: 100%;
   width: auto;
   outline: 0;
+  z-index: 1;
 }
 
 .ui-accordion .ui-accordion-content {
-  padding: 1em 2.2em;
+  padding-top: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-top: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* Component containers
@@ -1815,7 +1818,8 @@ a.ui-button:focus {
 }
 
 .ui-icon-triangle-1-s {
-  background-position: -65px -16px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .ui-icon-triangle-1-sw {
@@ -2665,6 +2669,7 @@ a:not([href]) {
   font-size: 20px;
   line-height: 26px;
   text-align: center;
+  margin-top: 26px;
 }
 
 @media (min-width: 768px) {
@@ -2958,7 +2963,7 @@ a:not([href]) {
   line-height: 24px;
   letter-spacing: -0.6px;
   margin-top: 12px;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
 }
 
 @media (min-width: 768px) {
@@ -2976,7 +2981,7 @@ a:not([href]) {
 .service__slider p {
   font-size: 16px;
   line-height: 24px;
-  margin-top: 9px;
+  margin-top: 7px;
 }
 
 .service__slider .service__pic {
@@ -3254,6 +3259,7 @@ a:not([href]) {
 .vacancies__accordion p {
   font-size: 16px;
   line-height: 24px;
+  z-index: 1000;
 }
 
 .vacancies__accordion h4 {
@@ -3268,6 +3274,31 @@ a:not([href]) {
 .vacancies__accordion li {
   font-size: 16px;
   line-height: 24px;
+}
+
+.vacancies__accordion .ui-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #000000;
+  border-right: 1.5px solid #000000;
+  opacity: 0.4;
+  background-image: none;
+  outline: none;
+  z-index: 1000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  right: 22px;
+  top: 40px;
+}
+
+.vacancies__accordion .ui-icon.ui-icon-triangle-1-s {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .vacancies__accordion div {
@@ -3295,10 +3326,27 @@ a:not([href]) {
   }
 }
 
+.vacancies__accordion div p {
+  z-index: 20;
+}
+
+.vacancies__accordion div h4 {
+  margin-top: 37px;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 1280px) {
   .vacancies__accordion div h4 {
     margin-bottom: 20px;
   }
+}
+
+.vacancies__accordion div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 12px;
+  padding-right: 21px;
 }
 
 @media (min-width: 1280px) {
@@ -3308,10 +3356,31 @@ a:not([href]) {
   }
 }
 
+.vacancies__accordion div li {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.vacancies__accordion div li::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #151a34;
+  top: 11px;
+  left: -12px;
+}
+
 @media (min-width: 1280px) {
   .vacancies__accordion div li {
     margin-bottom: 8px;
   }
+}
+
+.vacancies__accordion div .button {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1280px) {
@@ -3371,6 +3440,7 @@ a:not([href]) {
   font-size: 31px;
   line-height: 37px;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .media .swiper-wrapper {
@@ -3381,6 +3451,7 @@ a:not([href]) {
 
 .media .swiper-slide {
   width: 305px;
+  padding-top: 26px;
 }
 
 .media .swiper-slide p {
@@ -3420,6 +3491,27 @@ a:not([href]) {
   .media .swiper-slide p {
     padding-top: 12px;
   }
+}
+
+.media .swiper-slide a {
+  display: inline-block;
+  width: 30px;
+  position: relative;
+}
+
+.media .swiper-slide a svg {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  bottom: 0;
+  cursor: pointer;
+  -webkit-transform: opacity 0.5s;
+          transform: opacity 0.5s;
+  opacity: 1;
+}
+
+.media .swiper-slide a svg:hover {
+  opacity: 0.6;
 }
 
 .media .swiper-slide img,
@@ -3695,7 +3787,7 @@ a:not([href]) {
 }
 
 .header {
-  padding: 27px 3.9% 21px;
+  padding: 27px 3.9% 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

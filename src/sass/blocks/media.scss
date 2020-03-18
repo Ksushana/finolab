@@ -14,6 +14,7 @@
     font-size: 31px;
     line-height: 37px;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .swiper-wrapper {
@@ -22,6 +23,7 @@
 
   .swiper-slide {
     width: 305px;
+    padding-top: 26px;
 
     p {
       background: #ffffff;
@@ -55,6 +57,26 @@
 
       @include laptop {
         padding-top: 12px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: 30px;
+      position: relative;
+
+      svg {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        bottom: 0;
+        cursor: pointer;
+        transform: opacity 0.5s;
+        opacity: 1;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
 

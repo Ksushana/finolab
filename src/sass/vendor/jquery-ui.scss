@@ -91,15 +91,19 @@
   cursor: pointer;
   position: relative;
   margin: 20px 3% 0;
-  padding: 28px 4.5% 27px 4.5%;
+  padding: 28px 7.5% 27px 4.5%;
   font-size: 100%;
   width: auto;
   outline: 0;
+  z-index: 1;
 }
 .ui-accordion .ui-accordion-content {
-  padding: 1em 2.2em;
+  // height: 1262.88px;
+  padding-top: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-top: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* Component containers
@@ -363,7 +367,7 @@ a.ui-button:focus {
   background-position: -48px -16px;
 }
 .ui-icon-triangle-1-s {
-  background-position: -65px -16px;
+  transform: rotate(-90deg);
 }
 .ui-icon-triangle-1-sw {
   background-position: -80px -16px;

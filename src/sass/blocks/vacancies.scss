@@ -39,6 +39,20 @@
     font-weight: bold;
     letter-spacing: -0.4px;
 
+    // position: relative;
+    // z-index: 1000;
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 50px;
+    //   background-color: $color-white;
+    //   bottom: 0;
+    //   left: 0;
+    //   z-index: 100;
+    // }
+
     @include tablet {
       display: flex !important;
       flex-direction: column;
@@ -79,6 +93,7 @@
   p {
     font-size: 16px;
     line-height: 24px;
+    z-index: 1000;
   }
 
   h4 {
@@ -96,10 +111,23 @@
   }
 
   .ui-icon {
-    // background-image: url("../img/arrow.svg");
-    // position: absolute;
-    // width: 20px;
-    // height: 20px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 1.5px solid #000000;
+    border-right: 1.5px solid #000000;
+    opacity: 0.4;
+    background-image: none;
+    outline: none;
+    z-index: 1000;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+    right: 22px;
+    top: 40px;
+
+    &.ui-icon-triangle-1-s {
+      transform: rotate(135deg);
+    }
   }
 
   div {
@@ -108,7 +136,18 @@
     outline: none;
     width: auto;
     margin: 0 3%;
-    // transform: translateY(-3px);
+    // position: relative;
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 50px;
+    //   background-color: $color-white;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 100;
+    // }
 
     @include tablet {
       margin: 0 5%;
@@ -122,13 +161,24 @@
       letter-spacing: -0.1px;
     }
 
+    p {
+      z-index: 20;
+    }
+
     h4 {
+      margin-top: 37px;
+      margin-bottom: 20px;
+
       @include desktop {
         margin-bottom: 20px;
       }
     }
 
     ul {
+      @include list-reset;
+      padding-left: 12px;
+      padding-right: 21px;
+
       @include desktop {
         margin-bottom: 19px;
         margin-top: 16px;
@@ -136,12 +186,28 @@
     }
 
     li {
+      margin-bottom: 12px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $color-black;
+        top: 11px;
+        left: -12px;
+      }
+
       @include desktop {
         margin-bottom: 8px;
       }
     }
 
     .button {
+      width: 100%;
+      margin-bottom: 10px;
       @include desktop {
         margin-top: 25px;
         padding: 16px 29px;
