@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 
+  @include desktop {
+    padding-top: 51px;
+  }
+
   h2 {
     font-size: 25px;
     line-height: 32px;
@@ -48,6 +52,14 @@
       margin: 27px 5% 0 !important;
       padding-top: 27px !important;
       padding-bottom: 26px !important;
+    }
+
+    @include desktop {
+      margin: 27px 14% 0 !important;
+      padding-top: 31px !important;
+      padding-bottom: 22px !important;
+      padding-left: 3% !important;
+      padding-right: 15% !important;
     }
 
     span {
@@ -101,6 +113,40 @@
     @include tablet {
       margin: 0 5%;
     }
+
+    @include desktop {
+      margin: 0 14%;
+      padding-top: 4px !important;
+      padding-left: 35px !important;
+      padding-right: 129px !important;
+      letter-spacing: -0.1px;
+    }
+
+    h4 {
+      @include desktop {
+        margin-bottom: 20px;
+      }
+    }
+
+    ul {
+      @include desktop {
+        margin-bottom: 19px;
+        margin-top: 16px;
+      }
+    }
+
+    li {
+      @include desktop {
+        margin-bottom: 8px;
+      }
+    }
+
+    .button {
+      @include desktop {
+        margin-top: 25px;
+        padding: 16px 29px;
+      }
+    }
   }
 }
 
@@ -117,5 +163,12 @@
     width: 37.5%;
     margin-top: 30px;
     margin-bottom: 40px;
+  }
+
+  @include desktop {
+    width: 19%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 16px 20px !important;
   }
 }

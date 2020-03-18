@@ -3149,6 +3149,12 @@ a:not([href]) {
           flex-direction: column;
 }
 
+@media (min-width: 1280px) {
+  .vacancies {
+    padding-top: 51px;
+  }
+}
+
 .vacancies h2 {
   font-size: 25px;
   line-height: 32px;
@@ -3220,6 +3226,16 @@ a:not([href]) {
   }
 }
 
+@media (min-width: 1280px) {
+  .vacancies__accordion h3 {
+    margin: 27px 14% 0 !important;
+    padding-top: 31px !important;
+    padding-bottom: 22px !important;
+    padding-left: 3% !important;
+    padding-right: 15% !important;
+  }
+}
+
 .vacancies__accordion h3 span {
   font-weight: normal;
   display: inline-block;
@@ -3269,6 +3285,42 @@ a:not([href]) {
   }
 }
 
+@media (min-width: 1280px) {
+  .vacancies__accordion div {
+    margin: 0 14%;
+    padding-top: 4px !important;
+    padding-left: 35px !important;
+    padding-right: 129px !important;
+    letter-spacing: -0.1px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .vacancies__accordion div h4 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .vacancies__accordion div ul {
+    margin-bottom: 19px;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .vacancies__accordion div li {
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .vacancies__accordion div .button {
+    margin-top: 25px;
+    padding: 16px 29px;
+  }
+}
+
 .vacancies__button {
   width: 92%;
   margin: 25px 4% 25px;
@@ -3289,6 +3341,15 @@ a:not([href]) {
   }
 }
 
+@media (min-width: 1280px) {
+  .vacancies__button {
+    width: 19%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 16px 20px !important;
+  }
+}
+
 .media {
   padding-top: 17px;
   padding-bottom: 50px;
@@ -3297,6 +3358,12 @@ a:not([href]) {
 @media (min-width: 768px) {
   .media {
     padding-top: 4px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .media {
+    padding: 12px 150px 50px;
   }
 }
 
@@ -3359,6 +3426,35 @@ a:not([href]) {
 .media .swiper-slide svg {
   margin-left: 15px;
   margin-top: 10px;
+}
+
+.media__slider-arrow {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .media__slider-arrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    opacity: 0.55;
+    background-image: none;
+    outline: none;
+    top: 95px;
+    z-index: 1000;
+  }
+  .media__slider-arrow--next {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    right: -20px;
+  }
+  .media__slider-arrow--prev {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+    left: -20px;
+  }
 }
 
 .location {

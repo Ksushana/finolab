@@ -10435,7 +10435,14 @@ $(function() {
       slidesPerView: "auto",
       spaceBetween: 16,
       breakpoints: {
-        768: {}
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+          navigation: {
+            nextEl: ".media__slider-arrow--next",
+            prevEl: ".media__slider-arrow--prev"
+          }
+        }
       }
     });
   }
