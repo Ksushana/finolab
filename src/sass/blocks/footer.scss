@@ -17,6 +17,11 @@
     letter-spacing: -0.2px;
   }
 
+  @include desktop {
+    padding: 29px 14% 70px 14%;
+    letter-spacing: -0.2px;
+  }
+
   p {
     margin: 0;
   }

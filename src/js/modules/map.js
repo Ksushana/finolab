@@ -1,9 +1,25 @@
 (ymaps => {
+  function getCenter() {
+    if (window.isMobile()) {
+      return [55.725739, 37.679667];
+    }
+
+    if (window.isTablet()) {
+      return [55.715332, 37.679853];
+    }
+
+    if (window.isLaptop()) {
+      return [55.726546, 37.719319];
+    }
+
+    return [55.726546, 37.719319];
+  }
+
   function init() {
-    const mobileCenter = [55.715332, 37.679853];
-    const desktopCenter = [55.815332, 37.679853];
+    const placemarkCoordinates = [55.715332, 37.679853];
+    const center = getCenter();
     const myMap = new ymaps.Map("map", {
-      center: window.isMobile() ? mobileCenter : desktopCenter,
+      center,
       zoom: 13,
       controls: []
     });
@@ -18,7 +34,7 @@
     `);
 
     const myPlacemarkWithContent = new ymaps.Placemark(
-      [55.715332, 37.679853],
+      placemarkCoordinates,
       {},
       {
         // Опции.
@@ -32,7 +48,7 @@
         // её "ножки" (точки привязки).
         iconImageOffset: [0, -234],
         // Смещение слоя с содержимым относительно слоя с картинкой.
-        iconContentOffset: [15, 15],
+        iconContentOffset: [0, 20],
         // Макет содержимого.
         iconContentLayout: MyIconContentLayout
       }

@@ -38,20 +38,8 @@
     line-height: 26px;
     font-weight: bold;
     letter-spacing: -0.4px;
-
-    // position: relative;
-    // z-index: 1000;
-
-    // &:before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 50px;
-    //   background-color: $color-white;
-    //   bottom: 0;
-    //   left: 0;
-    //   z-index: 100;
-    // }
+    display: flex !important;
+    flex-direction: column;
 
     @include tablet {
       display: flex !important;
@@ -99,6 +87,9 @@
   h4 {
     font-size: 20px;
     line-height: 24px;
+
+    @include desktop {
+    }
   }
 
   ul {
@@ -124,6 +115,11 @@
     transition: transform 0.5s;
     right: 22px;
     top: 40px;
+
+    @include tablet {
+      right: 43px;
+      top: 33px;
+    }
 
     &.ui-icon-triangle-1-s {
       transform: rotate(135deg);
@@ -171,6 +167,7 @@
 
       @include desktop {
         margin-bottom: 20px;
+        margin-top: 26px;
       }
     }
 
@@ -211,6 +208,8 @@
       @include desktop {
         margin-top: 25px;
         padding: 16px 29px;
+        width: 23%;
+        margin-bottom: 36px;
       }
     }
   }

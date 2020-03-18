@@ -9,6 +9,10 @@
   @include laptop {
     padding-bottom: 0;
   }
+
+  @include desktop {
+    margin-top: 23px;
+  }
 }
 
 .location__address {
@@ -16,7 +20,7 @@
   width: 382px;
   transform: translate(-50%, 0);
   left: 50%;
-  min-height: 194px;
+  height: 194px;
   top: 0;
   background-color: $color-white;
   border: 0.5px solid #f5f5f5;
@@ -27,6 +31,7 @@
   flex-direction: column;
   padding: 8px 24px;
   letter-spacing: -0.4px;
+  text-align: left;
 
   &::after {
     content: "";
@@ -49,6 +54,25 @@
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 7px;
+    padding-left: 25px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:first-child {
+      &::after {
+        width: 17px;
+        height: 17px;
+        // background-image: url("./../img/map.svg");
+        background-color: red;
+        top: 0;
+      }
+    }
 
     &:last-child {
       color: $color-bg-blue-bright;
@@ -74,6 +98,10 @@
     right: 48px;
     top: 89px;
     padding-top: 0;
+  }
+
+  @include desktop {
+    right: 174px;
   }
 
   h2 {

@@ -1,14 +1,10 @@
 (function() {
-  var serviceSlider = document.querySelector(
+  let serviceSlider = document.querySelector(
     ".service__slider .swiper-container"
   );
 
-  if (serviceSlider) {
-    var serviceSwiperSlider = new Swiper(serviceSlider, {
-      // navigation: {
-      //   nextEl: ".feedback__slider-arrow--next",
-      //   prevEl: ".feedback__slider-arrow--prev"
-      // },
+  if (serviceSlider && !window.isDesktop()) {
+    let serviceSwiperSlider = new Swiper(serviceSlider, {
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
@@ -17,31 +13,28 @@
         768: {
           spaceBetween: 0
         },
-        1280: {
-          // serviceSwiperSlider.destroy();
-        }
+        1280: {}
       }
     });
   }
 })();
 
 (function() {
-  var projectsSlider = document.querySelector(
+  let projectsSlider = document.querySelector(
     ".projects__slider .swiper-container"
   );
 
   if (projectsSlider) {
-    var projectsSwiperSlider = new Swiper(projectsSlider, {
-      // navigation: {
-      //   nextEl: ".feedback__slider-arrow--next",
-      //   prevEl: ".feedback__slider-arrow--prev"
-      // },
+    let projectsSwiperSlider = new Swiper(projectsSlider, {
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
       spaceBetween: 17,
       breakpoints: {
-        768: {},
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 32
+        },
         1280: {
           slidesPerView: 3,
           spaceBetween: 32,
@@ -56,10 +49,10 @@
 })();
 
 (function() {
-  var mediaSlider = document.querySelector(".media__slider .swiper-container");
+  let mediaSlider = document.querySelector(".media__slider .swiper-container");
 
   if (mediaSlider) {
-    var mediaSwiperSlider = new Swiper(mediaSlider, {
+    let mediaSwiperSlider = new Swiper(mediaSlider, {
       // navigation: {
       //   nextEl: ".feedback__slider-arrow--next",
       //   prevEl: ".feedback__slider-arrow--prev"

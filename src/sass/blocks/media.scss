@@ -17,6 +17,12 @@
     margin-bottom: 0;
   }
 
+  .swiper-container {
+    @include tablet {
+      padding-left: 18px;
+    }
+  }
+
   .swiper-wrapper {
     display: flex;
   }

@@ -10281,17 +10281,22 @@
 (() => {
   const MOBILE = 767;
   const TABLET = 1023;
+  const LAPTOP = 1279;
 
-  window.isMobile = function () {
+  window.isMobile = function() {
     return window.matchMedia(`(max-width: ${MOBILE}px)`).matches;
   };
 
-  window.isTablet = function () {
+  window.isTablet = function() {
     return window.matchMedia(`(max-width: ${TABLET}px)`).matches;
   };
 
-  window.isDesktop = function () {
-    return window.matchMedia(`(min-width: ${TABLET + 1}px)`).matches;
+  window.isLaptop = function() {
+    return window.matchMedia(`(max-width: ${LAPTOP}px)`).matches;
+  };
+
+  window.isDesktop = function() {
+    return window.matchMedia(`(min-width: ${LAPTOP + 1}px)`).matches;
   };
 
   window.isMobileSafari = () => {
@@ -10310,11 +10315,27 @@ $(function() {
 });
 
 (ymaps => {
+  function getCenter() {
+    if (window.isMobile()) {
+      return [55.725739, 37.679667];
+    }
+
+    if (window.isTablet()) {
+      return [55.715332, 37.679853];
+    }
+
+    if (window.isLaptop()) {
+      return [55.726546, 37.719319];
+    }
+
+    return [55.726546, 37.719319];
+  }
+
   function init() {
-    const mobileCenter = [55.715332, 37.679853];
-    const desktopCenter = [55.815332, 37.679853];
+    const placemarkCoordinates = [55.715332, 37.679853];
+    const center = getCenter();
     const myMap = new ymaps.Map("map", {
-      center: window.isMobile() ? mobileCenter : desktopCenter,
+      center,
       zoom: 13,
       controls: []
     });
@@ -10329,7 +10350,7 @@ $(function() {
     `);
 
     const myPlacemarkWithContent = new ymaps.Placemark(
-      [55.715332, 37.679853],
+      placemarkCoordinates,
       {},
       {
         // Опции.
@@ -10343,7 +10364,7 @@ $(function() {
         // её "ножки" (точки привязки).
         iconImageOffset: [0, -234],
         // Смещение слоя с содержимым относительно слоя с картинкой.
-        iconContentOffset: [15, 15],
+        iconContentOffset: [0, 20],
         // Макет содержимого.
         iconContentLayout: MyIconContentLayout
       }
@@ -10365,16 +10386,12 @@ $(function() {
 })(window.ymaps);
 
 (function() {
-  var serviceSlider = document.querySelector(
+  let serviceSlider = document.querySelector(
     ".service__slider .swiper-container"
   );
 
-  if (serviceSlider) {
-    var serviceSwiperSlider = new Swiper(serviceSlider, {
-      // navigation: {
-      //   nextEl: ".feedback__slider-arrow--next",
-      //   prevEl: ".feedback__slider-arrow--prev"
-      // },
+  if (serviceSlider && !window.isDesktop()) {
+    let serviceSwiperSlider = new Swiper(serviceSlider, {
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
@@ -10383,31 +10400,28 @@ $(function() {
         768: {
           spaceBetween: 0
         },
-        1280: {
-          // serviceSwiperSlider.destroy();
-        }
+        1280: {}
       }
     });
   }
 })();
 
 (function() {
-  var projectsSlider = document.querySelector(
+  let projectsSlider = document.querySelector(
     ".projects__slider .swiper-container"
   );
 
   if (projectsSlider) {
-    var projectsSwiperSlider = new Swiper(projectsSlider, {
-      // navigation: {
-      //   nextEl: ".feedback__slider-arrow--next",
-      //   prevEl: ".feedback__slider-arrow--prev"
-      // },
+    let projectsSwiperSlider = new Swiper(projectsSlider, {
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
       spaceBetween: 17,
       breakpoints: {
-        768: {},
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 32
+        },
         1280: {
           slidesPerView: 3,
           spaceBetween: 32,
@@ -10422,10 +10436,10 @@ $(function() {
 })();
 
 (function() {
-  var mediaSlider = document.querySelector(".media__slider .swiper-container");
+  let mediaSlider = document.querySelector(".media__slider .swiper-container");
 
   if (mediaSlider) {
-    var mediaSwiperSlider = new Swiper(mediaSlider, {
+    let mediaSwiperSlider = new Swiper(mediaSlider, {
       // navigation: {
       //   nextEl: ".feedback__slider-arrow--next",
       //   prevEl: ".feedback__slider-arrow--prev"
