@@ -53,7 +53,7 @@
         iconContentLayout: MyIconContentLayout
       }
     );
-
+    myPlacemarkWithContent.options.set("iconPane", "overlaps");
     myMap.geoObjects.add(myPlacemarkWithContent).add(myPlacemarkWithContent);
     myMap.behaviors.disable([
       "drag",

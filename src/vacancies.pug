@@ -1,7 +1,7 @@
 include pug/mixins
 
 block variables
-- let mainTitle = "Nine Sense Clinic";
+- let mainTitle = "Finolab";
 
 doctype html
 html( lang="ru" )
@@ -16,7 +16,7 @@ html( lang="ru" )
 
   body
     header.header
-      +svg( "logo", 144, 24 )
+      a.header__logo(href="index.html" ): +svg( "logo", 144, 24 )
       +link-text( "Вакансии", "vacancies.html", "header__link" )
       a.header__link.header__link--phone(href="#") Связаться с нами
         +svg( "phone", 24, 27 )
@@ -114,7 +114,7 @@ html( lang="ru" )
 
   footer.footer
     .footer__contacts
-      a() +7 495 387-42-35
+      a(  href="tel:+74953874235" ) +7 495 387-42-35
       p Финолаб.ру, 2020
     .footer__dev
       p Дизайн и разработка: Genue

@@ -10369,7 +10369,7 @@ $(function() {
         iconContentLayout: MyIconContentLayout
       }
     );
-
+    myPlacemarkWithContent.options.set("iconPane", "overlaps");
     myMap.geoObjects.add(myPlacemarkWithContent).add(myPlacemarkWithContent);
     myMap.behaviors.disable([
       "drag",
@@ -10384,6 +10384,47 @@ $(function() {
 
   ymaps.ready(init);
 })(window.ymaps);
+
+(function() {
+  const slide = document.querySelector(".projects .swiper-slide");
+  const popup = document.querySelector(".popup");
+  const close = document.querySelector(".popup__close");
+
+  const openPopup = () => {
+    popup.classList.add(`popup--show`);
+    $(`body`).css("overflow-y", "hidden");
+    window.bodyScrollLock.disableBodyScroll(popup);
+    // info.ontouchmove = function(e) {
+    //   e.preventDefault();
+    // };
+  };
+
+  const closePopup = () => {
+    popup.classList.remove(`popup--show`);
+    $(`body`).css("overflow-y", "visible");
+    window.bodyScrollLock.enableBodyScroll(popup);
+    // setTimeout(() => $(info).css("opacity", 0), 500);
+
+    // setTimeout(() => returnContainer, 500);
+    // info.ontouchmove = function(e) {
+    //   return true;
+    // };
+  };
+
+  slide.addEventListener(`click`, () => {
+    window.setTimeout(openPopup, 100);
+  });
+
+  close.addEventListener(`click`, () => {
+    window.setTimeout(closePopup, 100);
+  });
+
+  // helpers
+
+  function getScale(element) {
+    return element.getBoundingClientRect().width / element.offsetWidth;
+  }
+})();
 
 (function() {
   let serviceSlider = document.querySelector(
@@ -10435,6 +10476,39 @@ $(function() {
   }
 })();
 
+(function() {
+  let projectsSliderPU = document.querySelector(
+    ".projects__slider--popup .swiper-container"
+  );
+
+  if (projectsSliderPU) {
+    let projectsSwiperSlider = new Swiper(projectsSliderPU, {
+      loop: true,
+      breakpointsInverse: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+      }
+      // breakpoints: {
+      //   // 1024: {
+      //   //   slidesPerView: 3,
+      //   //   spaceBetween: 32
+      //   // },
+      //   // 1280: {
+      //   //   slidesPerView: 3,
+      //   //   spaceBetween: 32,
+      //   //   navigation: {
+      //   //     nextEl: ".projects__slider-arrow--next",
+      //   //     prevEl: ".projects__slider-arrow--prev"
+      //   //   }
+      //   // }
+      // }
+    });
+  }
+})();
 (function() {
   let mediaSlider = document.querySelector(".media__slider .swiper-container");
 

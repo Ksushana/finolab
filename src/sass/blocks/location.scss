@@ -64,11 +64,11 @@
       background-repeat: no-repeat;
     }
 
-    &:first-child {
+    &:first-of-type {
       &::after {
         width: 17px;
         height: 17px;
-        // background-image: url("./../img/map.svg");
+        background-image: url("./../img/map.svg");
         background-color: red;
         top: 0;
       }
