@@ -10385,45 +10385,84 @@ $(function() {
   ymaps.ready(init);
 })(window.ymaps);
 
-(function() {
-  const slide = document.querySelector(".projects .swiper-slide");
+(() => {
+  const mainContainer = document.querySelector(
+    "section.projects .projects__slider .swiper-container"
+  );
+  const popupContainer = document.querySelector(
+    ".popup-container .projects__slider .swiper-container"
+  );
+  if (!popupContainer) return;
+  const mainSlides = document.querySelectorAll(".projects .swiper-slide");
   const popup = document.querySelector(".popup");
   const close = document.querySelector(".popup__close");
 
-  const openPopup = () => {
-    popup.classList.add(`popup--show`);
-    $(`body`).css("overflow-y", "hidden");
-    window.bodyScrollLock.disableBodyScroll(popup);
-    // info.ontouchmove = function(e) {
-    //   e.preventDefault();
-    // };
+  let popupSwiper;
+
+  const initSwiper = () => {
+    const projectsSliderPU = document.querySelector(
+      ".projects__slider--popup .swiper-container"
+    );
+    popupSwiper = new window.Swiper(projectsSliderPU, {
+      loop: true,
+      breakpointsInverse: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+      },
+      breakpoints: {
+        1280: {
+          navigation: {
+            nextEl: ".projects__slider--popup .projects__slider-arrow--next",
+            prevEl: ".projects__slider--popup .projects__slider-arrow--prev"
+          }
+        }
+      }
+    });
+  };
+
+  const destroySwiper = () => {
+    popupSwiper.destroy();
+  };
+
+  const copySlidesContent = () => {
+    popupContainer.innerHTML = mainContainer.innerHTML;
+  };
+
+  const openPopup = index => {
+    popup.classList.add("popup--show");
+    initSwiper();
+    popupSwiper.slideTo(index, 0);
+    // $('body').css("overflow-y", "hidden");
+    // window.bodyScrollLock.disableBodyScroll(popup);
   };
 
   const closePopup = () => {
-    popup.classList.remove(`popup--show`);
-    $(`body`).css("overflow-y", "visible");
+    popup.classList.remove("popup--show");
+    $("body").css("overflow-y", "visible");
+    destroySwiper();
     window.bodyScrollLock.enableBodyScroll(popup);
-    // setTimeout(() => $(info).css("opacity", 0), 500);
-
-    // setTimeout(() => returnContainer, 500);
-    // info.ontouchmove = function(e) {
-    //   return true;
-    // };
   };
 
-  slide.addEventListener(`click`, () => {
-    window.setTimeout(openPopup, 100);
+  copySlidesContent();
+
+  mainSlides.forEach((mainSlide, index) => {
+    mainSlide.addEventListener("click", () => {
+      openPopup(index + 1);
+    });
   });
 
-  close.addEventListener(`click`, () => {
-    window.setTimeout(closePopup, 100);
+  close.addEventListener("click", () => {
+    closePopup();
   });
-
-  // helpers
-
-  function getScale(element) {
-    return element.getBoundingClientRect().width / element.offsetWidth;
-  }
+  window.addEventListener("keydown", e => {
+    if (e.keyCode === 27) {
+      closePopup();
+    }
+  });
 })();
 
 (function() {
@@ -10447,13 +10486,13 @@ $(function() {
   }
 })();
 
-(function() {
-  let projectsSlider = document.querySelector(
-    ".projects__slider .swiper-container"
+(() => {
+  const projectsSlider = document.querySelector(
+    "section.projects .projects__slider .swiper-container"
   );
 
   if (projectsSlider) {
-    let projectsSwiperSlider = new Swiper(projectsSlider, {
+    const projectsSwiperSlider = new window.Swiper(projectsSlider, {
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
@@ -10467,45 +10506,11 @@ $(function() {
           slidesPerView: 3,
           spaceBetween: 32,
           navigation: {
-            nextEl: ".projects__slider-arrow--next",
-            prevEl: ".projects__slider-arrow--prev"
+            nextEl: "section.projects .projects__slider-arrow--next",
+            prevEl: "section.projects .projects__slider-arrow--prev"
           }
         }
       }
-    });
-  }
-})();
-
-(function() {
-  const projectsSliderPU = document.querySelector(
-    ".projects__slider--popup .swiper-container"
-  );
-
-  if (projectsSliderPU) {
-    let projectsSwiperSlider = new Swiper(projectsSliderPU, {
-      loop: true,
-      breakpointsInverse: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true
-      }
-      // breakpoints: {
-      //   // 1024: {
-      //   //   slidesPerView: 3,
-      //   //   spaceBetween: 32
-      //   // },
-      //   // 1280: {
-      //   //   slidesPerView: 3,
-      //   //   spaceBetween: 32,
-      //   //   navigation: {
-      //   //     nextEl: ".projects__slider-arrow--next",
-      //   //     prevEl: ".projects__slider-arrow--prev"
-      //   //   }
-      //   // }
-      // }
     });
   }
 })();

@@ -203,12 +203,6 @@ html( lang="ru" )
         section.location
           div( id="map" style="width: 100%; height: 648px" )
 
-          //- .location__address
-          //-   h2 Финолаб.ру
-          //-   a() г. Москва, ул. Шарикfffffffffоподшипниковская, д. 17
-          //-   a(  href="tel:+74953874235" ) +7 495 387-42-35
-          //-   a( href="mailto:hello@finolab.ru" ) hello@finolab.ru
-
           .location__form
             form
               h2 Написать нам
@@ -220,9 +214,6 @@ html( lang="ru" )
               .location__input-wrapper
                 textarea( name="message" type="text" rows="3" class="location__input location__input--message" placeholder="Сообщение" )
               button( class="location__button button" type="submit" ) Отправить
-
-
-
 
 
     footer.footer
@@ -238,22 +229,8 @@ html( lang="ru" )
         .popup__close
         .projects__slider.projects__slider--popup
           .swiper-container
-            .swiper-wrapper
-              .swiper-slide
-                //- +svg( "archive", 289, 173 )
-                img.project__photo( src="img/archive@2x.png" )
-                h3 Электронный архив
-                p Автоматизация управления документооборотом
-              .swiper-slide
-                //- +svg( "office", 289, 173 )
-                img.project__photo( src="img/archive@2x.png" )
-                h3 Единый фронт-офис
-                p Организация продуктов финансовой компании
-              .swiper-slide
-                //- +svg( "collectors", 289, 173 )
-                img.project__photo( src="img/archive@2x.png" )
-                h3 Finolab Collectors
-                p Управление просроченной задолженностью
+          .swiper-button-prev.projects__slider-arrow.projects__slider-arrow--prev
+          .swiper-button-next.projects__slider-arrow.projects__slider-arrow--next
         .swiper-pagination
 
 
