@@ -10383,7 +10383,9 @@ $(function() {
         768: {
           spaceBetween: 0
         },
-        1200: {}
+        1280: {
+          // serviceSwiperSlider.destroy();
+        }
       }
     });
   }
@@ -10406,7 +10408,14 @@ $(function() {
       spaceBetween: 17,
       breakpoints: {
         768: {},
-        1200: {}
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+          navigation: {
+            nextEl: ".projects__slider-arrow--next",
+            prevEl: ".projects__slider-arrow--prev"
+          }
+        }
       }
     });
   }

@@ -6,6 +6,10 @@
     padding: 27px 4.9% 27px;
   }
 
+  @include desktop {
+    padding: 27px 13.9% 27px 13.5%;
+  }
+
   svg {
     margin-right: auto;
   }
@@ -24,6 +28,10 @@
       svg {
         display: none;
       }
+    }
+
+    @include laptop {
+      letter-spacing: -0.5px;
     }
   }
 

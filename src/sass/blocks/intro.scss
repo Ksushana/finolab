@@ -8,6 +8,10 @@
     padding: 64px 3% 0;
   }
 
+  @include desktop {
+    padding-top: 74px;
+  }
+
   svg {
     width: 97%;
     height: auto;
@@ -17,6 +21,10 @@
       width: 96%;
       order: 3;
       margin: 60px auto 0;
+    }
+
+    @include desktop {
+      width: 77%;
     }
   }
 
@@ -32,6 +40,16 @@
       margin: 0 auto;
       margin-bottom: 0;
     }
+
+    @include laptop {
+      width: 50%;
+    }
+
+    @include desktop {
+      font-size: 39px;
+      line-height: 48px;
+      width: 60%;
+    }
   }
 
   p {
@@ -41,6 +59,17 @@
 
     @include tablet {
       margin-top: 26px;
+    }
+
+    @include laptop {
+      width: 75%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include desktop {
+      width: 70%;
+      margin-top: 16px;
     }
   }
 }

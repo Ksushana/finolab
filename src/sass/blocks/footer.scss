@@ -12,6 +12,11 @@
     padding: 29px 5% 70px 6%;
   }
 
+  @include laptop {
+    padding: 29px 4.5% 70px 4.5%;
+    letter-spacing: -0.2px;
+  }
+
   p {
     margin: 0;
   }

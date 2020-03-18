@@ -10,6 +10,10 @@
     padding-bottom: 88px;
   }
 
+  @include laptop {
+    padding-bottom: 64px;
+  }
+
   svg {
     width: 93.5%;
     height: auto;
@@ -22,6 +26,17 @@
       margin-top: 50px;
       order: 2;
       margin-top: 15px;
+    }
+
+    @include laptop {
+      margin-left: 16px;
+      margin-top: 4px;
+    }
+
+    @include desktop {
+      margin-left: 32px;
+      margin-top: 3px;
+      width: 36.5%;
     }
   }
 }
@@ -48,11 +63,27 @@
     margin-bottom: 41px;
   }
 
+  @include laptop {
+    margin-left: 48px;
+    margin-top: 21px;
+  }
+
+  @include desktop {
+    width: 34%;
+    margin-left: 175px;
+  }
+
   h2 {
     font-size: 25px;
     line-height: 32px;
     letter-spacing: -0.8px;
     margin-bottom: 25px;
+
+    @include desktop {
+      font-size: 31px;
+      line-height: 37px;
+      margin: 20px 0;
+    }
   }
 
   p {
@@ -72,6 +103,10 @@
     padding-top: 38px;
   }
 
+  @include laptop {
+    padding-top: 49px;
+  }
+
   h3 {
     font-size: 16px;
     line-height: 24px;
@@ -81,6 +116,10 @@
 
     @include tablet {
       margin-top: 28px;
+    }
+
+    @include laptop {
+      margin-top: 16px;
     }
   }
 
@@ -110,6 +149,11 @@
     @include tablet {
       width: 245px;
       padding-left: 40px;
+    }
+
+    @include laptop {
+      padding-left: 48px;
+      width: 331px;
     }
   }
 

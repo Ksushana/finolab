@@ -8,6 +8,14 @@
     padding: 25px 4% 35px;
   }
 
+  @include laptop {
+    padding-bottom: 31px;
+  }
+
+  @include desktop {
+    padding-bottom: 51px;
+  }
+
   svg {
     width: 93%;
     height: auto;
@@ -19,13 +27,36 @@
       margin-left: 10px;
       margin-top: 50px;
     }
+
+    @include laptop {
+      width: 47%;
+      margin-left: 3px;
+    }
+
+    @include desktop {
+      margin-top: 68px;
+      margin-left: 120px;
+      width: 37.5%;
+    }
   }
 }
 
 .team__text-block {
   margin: 24px 4%;
+
   @include tablet {
     width: 44%;
+  }
+
+  @include laptop {
+    width: 47%;
+    margin-right: 11px;
+    margin-left: 0px;
+  }
+
+  @include desktop {
+    width: 47.7%;
+    margin-top: 39px;
   }
 
   h2 {
@@ -33,6 +64,12 @@
     line-height: 32px;
     letter-spacing: -0.8px;
     margin-bottom: 25px;
+
+    @include desktop {
+      font-size: 31px;
+      line-height: 38px;
+      margin-bottom: 19px;
+    }
   }
 
   p {
@@ -40,5 +77,9 @@
     line-height: 24px;
     letter-spacing: -0.16px;
     margin-top: 18px;
+
+    @include desktop {
+      width: 80%;
+    }
   }
 }

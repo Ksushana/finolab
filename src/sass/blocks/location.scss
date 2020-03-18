@@ -5,6 +5,10 @@
   @include tablet {
     padding-bottom: 85px;
   }
+
+  @include laptop {
+    padding-bottom: 0;
+  }
 }
 
 .location__address {
@@ -54,16 +58,38 @@
 
 .location__form {
   padding-top: 37px;
+  background-color: $color-white;
 
   @include tablet {
     padding-top: 52px;
   }
+
+  @include laptop {
+    position: absolute;
+    width: 448px;
+    border: 0.5px solid #f5f5f5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    right: 48px;
+    top: 89px;
+    padding-top: 0;
+  }
+
   h2 {
     font-size: 25px;
     line-height: 46px;
     text-align: center;
     letter-spacing: -0.8px;
     margin-bottom: 10px;
+
+    @include laptop {
+      text-align: left;
+      margin-top: 24px;
+      margin-left: 30px;
+      margin-bottom: 11px;
+      margin-right: 30px;
+    }
   }
 
   p {
@@ -76,6 +102,12 @@
       text-align: center;
       width: 66%;
       margin: 0 auto 15px;
+    }
+
+    @include laptop {
+      text-align: left;
+      width: 95%;
+      margin: 0 30px 15px;
     }
   }
 
@@ -93,6 +125,11 @@
     @include tablet {
       margin: 8px 5%;
       width: 90%;
+    }
+
+    @include laptop {
+      margin: 8px 7%;
+      width: 86%;
     }
 
     &::placeholder {
@@ -116,6 +153,11 @@
     @include tablet {
       margin: 3px 5%;
       width: 90%;
+    }
+
+    @include laptop {
+      margin: 3px 7% 31px;
+      width: 86%;
     }
   }
 }

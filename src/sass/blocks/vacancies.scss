@@ -12,6 +12,15 @@
     @include tablet {
       margin-bottom: 25px;
     }
+
+    @include laptop {
+      margin-bottom: 16px;
+    }
+
+    @include desktop {
+      font-size: 31px;
+      line-height: 37px;
+    }
   }
 }
 
@@ -34,6 +43,13 @@
       padding-bottom: 27px !important;
     }
 
+    @include laptop {
+      flex-direction: row;
+      margin: 27px 5% 0 !important;
+      padding-top: 27px !important;
+      padding-bottom: 26px !important;
+    }
+
     span {
       font-weight: normal;
       display: inline-block;
@@ -42,8 +58,8 @@
       opacity: 0.4;
       letter-spacing: -0.3px;
 
-      @include tablet {
-        // margin-left: auto;
+      @include laptop {
+        margin-left: auto;
       }
     }
   }
@@ -95,5 +111,11 @@
   @include tablet {
     width: 50%;
     margin: 45px auto;
+  }
+
+  @include laptop {
+    width: 37.5%;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 }
