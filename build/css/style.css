@@ -3161,6 +3161,11 @@ a:not([href]) {
           flex-direction: column;
 }
 
+.vacancies--separate {
+  padding-bottom: 50px;
+  border-top: 1px solid rgba(207, 207, 207, 0.25);
+}
+
 @media (min-width: 1280px) {
   .vacancies {
     padding-top: 51px;
