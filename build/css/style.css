@@ -4138,13 +4138,23 @@ a:not([href]) {
 }
 
 .popup .projects__slider-arrow--next {
-  right: -32px;
-  top: 43%;
+  right: -52px;
+  top: 46%;
+}
+
+.popup .projects__slider-arrow--next::before {
+  right: 10px;
+  top: 10px;
 }
 
 .popup .projects__slider-arrow--prev {
-  left: -32px;
+  left: -52px;
   top: 47%;
+}
+
+.popup .projects__slider-arrow--prev::before {
+  right: 10px;
+  top: 10px;
 }
 
 .popup .swiper-pagination {
