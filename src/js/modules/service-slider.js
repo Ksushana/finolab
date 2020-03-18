@@ -49,7 +49,7 @@
 })();
 
 (function() {
-  let projectsSliderPU = document.querySelector(
+  const projectsSliderPU = document.querySelector(
     ".projects__slider--popup .swiper-container"
   );
 
@@ -81,6 +81,7 @@
     });
   }
 })();
+
 (function() {
   let mediaSlider = document.querySelector(".media__slider .swiper-container");
 

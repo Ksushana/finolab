@@ -62,6 +62,7 @@
       position: absolute;
       background-position: center;
       background-repeat: no-repeat;
+      background-size: contain;
     }
 
     &:first-of-type {
@@ -69,8 +70,28 @@
         width: 17px;
         height: 17px;
         background-image: url("./../img/map.svg");
-        background-color: red;
         top: 0;
+        left: 0;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::after {
+        width: 17px;
+        height: 17px;
+        background-image: url("./../img/phone.svg");
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:nth-of-type(3) {
+      &::after {
+        width: 17px;
+        height: 17px;
+        background-image: url("./../img/mail.svg");
+        top: 0;
+        left: 0;
       }
     }
 

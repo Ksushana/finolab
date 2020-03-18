@@ -232,27 +232,29 @@ html( lang="ru" )
       .footer__dev
         p Дизайн и разработка: Genue
 
+
     .popup
-      .popup__close
-      .projects__slider.projects__slider--popup
-        .swiper-container
-          .swiper-wrapper
-            .swiper-slide
-              //- +svg( "archive", 289, 173 )
-              img.project__photo( src="img/archive@2x.png" )
-              h3 Электронный архив
-              p Автоматизация управления документооборотом
-            .swiper-slide
-              //- +svg( "office", 289, 173 )
-              img.project__photo( src="img/archive@2x.png" )
-              h3 Единый фронт-офис
-              p Организация продуктов финансовой компании
-            .swiper-slide
-              //- +svg( "collectors", 289, 173 )
-              img.project__photo( src="img/archive@2x.png" )
-              h3 Finolab Collectors
-              p Управление просроченной задолженностью
-      .swiper-pagination
+      .popup-container
+        .popup__close
+        .projects__slider.projects__slider--popup
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide
+                //- +svg( "archive", 289, 173 )
+                img.project__photo( src="img/archive@2x.png" )
+                h3 Электронный архив
+                p Автоматизация управления документооборотом
+              .swiper-slide
+                //- +svg( "office", 289, 173 )
+                img.project__photo( src="img/archive@2x.png" )
+                h3 Единый фронт-офис
+                p Организация продуктов финансовой компании
+              .swiper-slide
+                //- +svg( "collectors", 289, 173 )
+                img.project__photo( src="img/archive@2x.png" )
+                h3 Finolab Collectors
+                p Управление просроченной задолженностью
+        .swiper-pagination
 
 
     block scripts

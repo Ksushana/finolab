@@ -9,7 +9,29 @@
   display: none;
 
   &--show {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include desktop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .popup-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    @include desktop {
+      width: 928px;
+      align-self: center;
+      margin: auto;
+      background-color: $color-white;
+      height: auto;
+      border-radius: 8px;
+      padding-top: 40px;
+    }
   }
 
   .swiper-slide {
@@ -35,11 +57,11 @@
 }
 
 .popup__close {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
 
   &::before {
     content: "";
@@ -49,6 +71,8 @@
     background-color: #151a34;
     opacity: 0.4;
     transform: rotate(45deg);
+    top: 25px;
+    left: 11px;
   }
 
   &::after {
@@ -59,9 +83,11 @@
     background-color: #151a34;
     opacity: 0.4;
     transform: rotate(-45deg);
+    top: 25px;
+    left: 11px;
   }
 }
 
 .projects__slider--popup {
-  margin-top: 50%;
+  margin: auto 0;
 }

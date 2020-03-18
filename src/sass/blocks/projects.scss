@@ -26,6 +26,24 @@
   margin-top: 43px;
   position: relative;
 
+  &--popup {
+    padding-top: 25px;
+
+    h3 {
+      margin-top: 13px;
+    }
+
+    p {
+      margin-top: 7px;
+    }
+
+    img {
+      @include tablet {
+        width: 93% !important;
+      }
+    }
+  }
+
   .swiper-slide {
     width: 300px;
     padding-left: 17px;
