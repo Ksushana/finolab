@@ -15,6 +15,7 @@
 
   @include desktop {
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100000;
   }
 
   .popup-container {
@@ -37,11 +38,57 @@
   .swiper-slide {
     width: 100%;
     padding: 0 17px;
+
+    img {
+      @include tablet {
+        width: 93% !important;
+      }
+      @include laptop {
+        max-height: 68vh;
+        width: auto !important;
+      }
+
+      @include desktop {
+        max-height: 500px;
+        width: auto !important;
+      }
+    }
+
+    h3 {
+      @include desktop {
+        margin-top: 0px;
+      }
+    }
+    p {
+      @include desktop {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  .projects__slider-arrow {
+    &::before {
+      width: 35px;
+      height: 35px;
+    }
+    &--next {
+      right: -32px;
+      top: 43%;
+    }
+
+    &--prev {
+      left: -32px;
+      top: 47%;
+    }
   }
 
   .swiper-pagination {
-    bottom: 32px;
+    bottom: 5%;
     width: 100%;
+
+    @include desktop {
+      display: none;
+    }
   }
 
   .swiper-pagination-bullet {

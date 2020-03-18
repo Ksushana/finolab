@@ -29,18 +29,16 @@
   &--popup {
     padding-top: 25px;
 
+    @include laptop {
+      padding-top: 0;
+    }
+
     h3 {
       margin-top: 13px;
     }
 
     p {
       margin-top: 7px;
-    }
-
-    img {
-      @include tablet {
-        width: 93% !important;
-      }
     }
   }
 
@@ -86,15 +84,24 @@
 
   @include desktop {
     display: block;
-    width: 24px;
-    height: 24px;
-    border-top: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    opacity: 0.55;
+    width: 50px;
+    height: 50px;
+    position: absolute;
     background-image: none;
     outline: none;
     top: 95px;
     z-index: 1000;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 25px;
+      border-top: 2px solid #ffffff;
+      border-right: 2px solid #ffffff;
+      opacity: 0.55;
+      top: 0;
+    }
 
     &--next {
       transform: rotate(45deg);

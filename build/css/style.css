@@ -3083,18 +3083,18 @@ a:not([href]) {
   padding-top: 25px;
 }
 
+@media (min-width: 1024px) {
+  .projects__slider--popup {
+    padding-top: 0;
+  }
+}
+
 .projects__slider--popup h3 {
   margin-top: 13px;
 }
 
 .projects__slider--popup p {
   margin-top: 7px;
-}
-
-@media (min-width: 768px) {
-  .projects__slider--popup img {
-    width: 93% !important;
-  }
 }
 
 .projects__slider .swiper-slide {
@@ -3146,15 +3146,23 @@ a:not([href]) {
 @media (min-width: 1280px) {
   .projects__slider-arrow {
     display: block;
-    width: 24px;
-    height: 24px;
-    border-top: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-    opacity: 0.55;
+    width: 50px;
+    height: 50px;
+    position: absolute;
     background-image: none;
     outline: none;
     top: 95px;
     z-index: 1000;
+  }
+  .projects__slider-arrow::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    opacity: 0.55;
+    top: 0;
   }
   .projects__slider-arrow--next {
     -webkit-transform: rotate(45deg);
@@ -4020,6 +4028,7 @@ a:not([href]) {
 @media (min-width: 1280px) {
   .popup {
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100000;
   }
 }
 
@@ -4053,9 +4062,62 @@ a:not([href]) {
   padding: 0 17px;
 }
 
+@media (min-width: 768px) {
+  .popup .swiper-slide img {
+    width: 93% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popup .swiper-slide img {
+    max-height: 68vh;
+    width: auto !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .popup .swiper-slide img {
+    max-height: 500px;
+    width: auto !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .popup .swiper-slide h3 {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .popup .swiper-slide p {
+    margin-bottom: 28px;
+  }
+}
+
+.popup .projects__slider-arrow::before {
+  width: 35px;
+  height: 35px;
+}
+
+.popup .projects__slider-arrow--next {
+  right: -32px;
+  top: 43%;
+}
+
+.popup .projects__slider-arrow--prev {
+  left: -32px;
+  top: 47%;
+}
+
 .popup .swiper-pagination {
-  bottom: 32px;
+  bottom: 5%;
   width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .popup .swiper-pagination {
+    display: none;
+  }
 }
 
 .popup .swiper-pagination-bullet {
