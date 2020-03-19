@@ -2482,7 +2482,7 @@ a.ui-button:focus {
 /* General */
 @font-face {
   font-family: "ApercuPro-Bold";
-  src: url("./fonts/ApercuProBold.woff") format("woff"), url("./fonts/ApercuProBold.woff2") format("woff2");
+  src: url("../fonts/ApercuProBold.woff") format("woff"), url("../fonts/ApercuProBold.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
@@ -2490,7 +2490,7 @@ a.ui-button:focus {
 
 @font-face {
   font-family: "ApercuPro-Regular";
-  src: url("./fonts/ApercuProRegular.woff") format("woff"), url("./fonts/ApercuProRegular.woff2") format("woff2");
+  src: url("../fonts/ApercuProRegular.woff") format("woff"), url("../fonts/ApercuProRegular.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
@@ -2527,7 +2527,7 @@ body {
   min-height: 100vh;
   font-size: 20px;
   line-height: 24px;
-  font-family: "Apercu-Regular", "Arial", sans-serif;
+  font-family: "ApercuPro-Regular", "Arial", sans-serif;
   font-weight: 400;
   color: #151a34;
   background-color: #ffffff;
