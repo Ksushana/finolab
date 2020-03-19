@@ -15,7 +15,7 @@ html( lang="ru" )
     script( src="https://api-maps.yandex.ru/2.1/?apikey=58263f1b-71c0-4f82-aad7-91a563964fa9&lang=ru_RU" type="text/javascript" )
 
   body
-    header.header
+    header.header( id="links" )
       a.header__logo(href="#" ): +svg( "logo", 144, 24 )
       +link-text( "Вакансии", "vacancies.html", "header__link" )
       a.header__link.header__link--phone(href="#form") Связаться с нами
