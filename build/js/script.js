@@ -10450,7 +10450,7 @@ $(function() {
     popup.classList.remove("popup--show");
     body.classList.remove("show");
     $("body").css("overflow-y", "visible");
-    destroySwiper();
+    setTimeout(destroySwiper, 1000);
     window.bodyScrollLock.enableBodyScroll(popup);
   };
 
