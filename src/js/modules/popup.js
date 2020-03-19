@@ -6,7 +6,6 @@
     ".popup-container .projects__slider .swiper-container"
   );
   if (!popupContainer) return;
-  const mainSlides = document.querySelectorAll(".projects .swiper-slide");
   const popup = document.querySelector(".popup");
   const close = document.querySelector(".popup__close");
   const body = document.querySelector("body");
@@ -63,7 +62,7 @@
     popup.classList.remove("popup--show");
     body.classList.remove("show");
     $("body").css("overflow-y", "visible");
-    setTimeout(destroySwiper, 1000);
+    setTimeout(destroySwiper, 300);
     window.bodyScrollLock.enableBodyScroll(popup);
   };
 
@@ -79,6 +78,7 @@
     ) {
       const id = parseInt(parent.dataset.slideId, 10);
       openPopup(id);
+      return;
     }
 
     const parentParent = parent.parentNode;
