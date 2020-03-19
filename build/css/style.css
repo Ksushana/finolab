@@ -2494,16 +2494,16 @@ a.ui-button:focus {
 
 /* General */
 @font-face {
-  font-family: "Apercu-Regular";
-  src: url("./../../fonts/ApercuRegular.woff") format("woff"), url("./../fonts/ApercuRegular.woff2") format("woff2");
+  font-family: "ApercuPro-Bold";
+  src: url("./fonts/ApercuProBold.woff") format("woff"), url("./fonts/ApercuProBold.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Apercu-Bold";
-  src: url("./../../fonts/ApercuBold.woff") format("woff"), url("./../../fonts/ApercuBold.woff2") format("woff2");
+  font-family: "ApercuPro-Regular";
+  src: url("./fonts/ApercuProRegular.woff") format("woff"), url("./fonts/ApercuProRegular.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
@@ -2656,7 +2656,6 @@ a:not([href]) {
   font-size: 27px;
   line-height: 36px;
   text-align: center;
-  letter-spacing: -0.8px;
   margin-bottom: 6px;
 }
 
@@ -3120,7 +3119,7 @@ a:not([href]) {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .projects .project__photo {
     position: relative;
   }
@@ -4082,12 +4081,6 @@ a:not([href]) {
   }
 }
 
-@media (min-width: 1024px) {
-  .header__link--phone {
-    letter-spacing: -0.5px;
-  }
-}
-
 .header__link svg {
   width: 20px;
   height: 24px;
@@ -4310,6 +4303,7 @@ a:not([href]) {
   position: absolute;
   right: 20px;
   top: 20px;
+  cursor: pointer;
 }
 
 .popup__close::before {

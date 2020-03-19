@@ -10470,6 +10470,7 @@ $(function() {
 
     const parentParent = parent.parentNode;
     if (
+      parentParent &&
       parentParent.classList.contains("swiper-slide--project") &&
       !parentParent.classList.contains("swiper-slide--popup")
     ) {
