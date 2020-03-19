@@ -3126,7 +3126,7 @@ a:not([href]) {
   .projects .project__photo::before {
     content: "";
     position: absolute;
-    background-image: url("./../../img/zoom.svg");
+    background-image: url("./../img/zoom.svg");
     background-position: center;
     background-size: 36px 24px;
     background-repeat: no-repeat;
