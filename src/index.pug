@@ -9,8 +9,8 @@ html( lang="ru" )
     meta( charset="UTF-8" )
     title #{mainTitle} !{title && "| " + title}
     meta( name="viewport" content="width=device-width, initial-scale=1.0" )
-    link( rel="preload" href="fonts/ApercuBold.woff2" as="font" type="font/woff2" crossorigin )
-    link( rel="preload" href="fonts/ApercuRegular.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/ApercuProBold.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/ApercuProRegular.woff2" as="font" type="font/woff2" crossorigin )
     link( rel="stylesheet" href="css/style.min.css" )
     script( src="https://api-maps.yandex.ru/2.1/?apikey=58263f1b-71c0-4f82-aad7-91a563964fa9&lang=ru_RU" type="text/javascript" )
 
@@ -18,7 +18,7 @@ html( lang="ru" )
     header.header
       a.header__logo(href="#" ): +svg( "logo", 144, 24 )
       +link-text( "Вакансии", "vacancies.html", "header__link" )
-      a.header__link.header__link--phone(href="#") Связаться с нами
+      a.header__link.header__link--phone(href="#form") Связаться с нами
         +svg( "phone1", 24, 27 )
 
     main
@@ -203,7 +203,7 @@ html( lang="ru" )
         section.location
           div( id="map" style="width: 100%; height: 648px" )
 
-          .location__form
+          .location__form( id="form" )
             form
               h2 Написать нам
               p Отправьте нам сообщение и специалисты нашей компании ответят на все интересующие вопросы
