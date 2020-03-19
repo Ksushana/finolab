@@ -2484,7 +2484,7 @@ a.ui-button:focus {
   font-family: "ApercuPro-Bold";
   src: url("../fonts/ApercuProBold.woff") format("woff"), url("../fonts/ApercuProBold.woff2") format("woff2");
   /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -2575,6 +2575,12 @@ a:hover {
 a:not([href]) {
   cursor: default;
   pointer-events: none;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 800;
 }
 
 .visually-hidden {
@@ -2788,7 +2794,6 @@ a:not([href]) {
 .team__text-block h2 {
   font-size: 25px;
   line-height: 32px;
-  letter-spacing: -0.8px;
   margin-bottom: 25px;
 }
 
@@ -2803,7 +2808,6 @@ a:not([href]) {
 .team__text-block p {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.2px;
   margin-top: 18px;
 }
 
@@ -2935,7 +2939,6 @@ a:not([href]) {
 .service__text-block h2 {
   font-size: 25px;
   line-height: 32px;
-  letter-spacing: -0.8px;
   margin-bottom: 25px;
 }
 
@@ -2950,7 +2953,6 @@ a:not([href]) {
 .service__text-block p {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.3px;
   margin-top: 18px;
 }
 
@@ -2984,7 +2986,6 @@ a:not([href]) {
 .service__slider h3 {
   font-size: 15px;
   line-height: 24px;
-  letter-spacing: 0px;
   margin-top: 12px;
   margin-bottom: 7px;
 }
@@ -3096,7 +3097,6 @@ a:not([href]) {
 .projects h2 {
   font-size: 25px;
   line-height: 32px;
-  letter-spacing: -0.8px;
 }
 
 @media (min-width: 1280px) {
@@ -3179,7 +3179,6 @@ a:not([href]) {
 .projects__slider .swiper-slide h3 {
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: -0.8px;
   margin-bottom: 10px;
 }
 
@@ -3192,7 +3191,6 @@ a:not([href]) {
 .projects__slider .swiper-slide p {
   font-size: 15px;
   line-height: 24px;
-  letter-spacing: 0.3px;
   margin-top: 13px;
 }
 
@@ -3263,7 +3261,6 @@ a:not([href]) {
   font-size: 25px;
   line-height: 32px;
   text-align: center;
-  letter-spacing: -0.2px;
 }
 
 @media (min-width: 768px) {
@@ -3300,7 +3297,6 @@ a:not([href]) {
   font-size: 20px;
   line-height: 26px;
   font-weight: bold;
-  letter-spacing: -0.3px;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -3604,7 +3600,6 @@ a:not([href]) {
 
 .media .swiper-slide p {
   background: #ffffff;
-  letter-spacing: -0.2px;
   border: 0.5px solid #f5f5f5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3763,7 +3758,6 @@ a:not([href]) {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 8px 50px 8px 24px;
-  letter-spacing: -0.4px;
   text-align: left;
 }
 
@@ -3876,7 +3870,6 @@ a:not([href]) {
   font-size: 24px;
   line-height: 46px;
   text-align: center;
-  letter-spacing: -0.6px;
   margin-bottom: 10px;
 }
 
@@ -3894,7 +3887,6 @@ a:not([href]) {
   font-size: 16px;
   line-height: 24px;
   margin: 0 3.5% 23px;
-  letter-spacing: -0.1px;
 }
 
 @media (min-width: 768px) {
@@ -4114,14 +4106,12 @@ a:not([href]) {
 @media (min-width: 1024px) {
   .footer {
     padding: 29px 4.5% 39px 4.5%;
-    letter-spacing: -0.2px;
   }
 }
 
 @media (min-width: 1280px) {
   .footer {
     padding: 29px 14% 39px 14%;
-    letter-spacing: -0.2px;
   }
 }
 

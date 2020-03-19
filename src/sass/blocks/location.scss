@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   padding: 8px 50px 8px 24px;
-  letter-spacing: -0.4px;
+  // letter-spacing: -0.4px;
   text-align: left;
 
   &::after {
@@ -138,7 +138,7 @@
     font-size: 24px;
     line-height: 46px;
     text-align: center;
-    letter-spacing: -0.6px;
+    // letter-spacing: -0.6px;
     margin-bottom: 10px;
 
     @include laptop {
@@ -154,7 +154,7 @@
     font-size: 16px;
     line-height: 24px;
     margin: 0 3.5% 23px;
-    letter-spacing: -0.1px;
+    // letter-spacing: -0.1px;
 
     @include tablet {
       text-align: center;

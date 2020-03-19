@@ -15,12 +15,12 @@
 
   @include laptop {
     padding: 29px 4.5% 39px 4.5%;
-    letter-spacing: -0.2px;
+    // letter-spacing: -0.2px;
   }
 
   @include desktop {
     padding: 29px 14% 39px 14%;
-    letter-spacing: -0.2px;
+    // letter-spacing: -0.2px;
   }
 
   p {
