@@ -17,7 +17,7 @@
 }
 
 @mixin mobile-only {
-  @media (max-width: $width-tablet - 1px) {
+  @media (max-width: $width-mobile - 1px) {
     @content;
   }
 }

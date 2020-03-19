@@ -4,18 +4,46 @@
   height: 100vh;
   top: 0;
   background-color: $color-white;
-  z-index: 100;
+  z-index: 100000;
   text-align: center;
-  display: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+  pointer-events: none;
+
+  @include desktop {
+    background-color: transparent;
+  }
 
   &--show {
     display: flex;
     flex-direction: column;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: unset;
+
+    .popup-container {
+      opacity: 1;
+    }
   }
 
   @include desktop {
-    background-color: rgba(21, 26, 52, 0.8);
-    z-index: 100000;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: transparent;
+    //   z-index: 100000;
+    //   top: 0;
+    //   left: 0;
+    //   transition: background-color 0.5s;
+    // }
+    // &--show {
+    //   &::before {
+    //     background-color: rgba(21, 26, 52, 0.8);
+    //   }
+    // }
   }
 
   .popup-container {
@@ -23,6 +51,8 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    position: relative;
+    z-index: 1000000;
 
     @include desktop {
       width: 928px;
@@ -38,6 +68,7 @@
   .swiper-slide {
     width: 100%;
     padding: 0 17px;
+    cursor: auto;
 
     img {
       @include tablet {
@@ -142,6 +173,10 @@
     transform: rotate(-45deg);
     top: 25px;
     left: 11px;
+  }
+
+  @include desktop {
+    z-index: 10000;
   }
 }
 

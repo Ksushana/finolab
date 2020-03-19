@@ -9,6 +9,7 @@
   const mainSlides = document.querySelectorAll(".projects .swiper-slide");
   const popup = document.querySelector(".popup");
   const close = document.querySelector(".popup__close");
+  const body = document.querySelector("body");
 
   let popupSwiper;
 
@@ -51,6 +52,7 @@
 
   const openPopup = index => {
     popup.classList.add("popup--show");
+    body.classList.add("show");
     initSwiper();
     popupSwiper.slideTo(index, 0);
     // $('body').css("overflow-y", "hidden");
@@ -59,6 +61,7 @@
 
   const closePopup = () => {
     popup.classList.remove("popup--show");
+    body.classList.remove("show");
     $("body").css("overflow-y", "visible");
     destroySwiper();
     window.bodyScrollLock.enableBodyScroll(popup);
@@ -71,10 +74,19 @@
     }
     const parent = evt.target.parentNode;
     if (
-      parent.classList.contains("swiper-slide") &&
+      parent.classList.contains("swiper-slide--project") &&
       !parent.classList.contains("swiper-slide--popup")
     ) {
       const id = parseInt(parent.dataset.slideId, 10);
+      openPopup(id);
+    }
+
+    const parentParent = parent.parentNode;
+    if (
+      parentParent.classList.contains("swiper-slide--project") &&
+      !parentParent.classList.contains("swiper-slide--popup")
+    ) {
+      const id = parseInt(parentParent.dataset.slideId, 10);
       openPopup(id);
     }
   });

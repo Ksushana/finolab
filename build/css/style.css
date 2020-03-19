@@ -2506,18 +2506,18 @@ a.ui-button:focus {
 /* General */
 @font-face {
   font-family: "Apercu-Regular";
-  font-weight: 400;
+  src: url("./../../fonts/ApercuRegular.woff") format("woff"), url("./../fonts/ApercuRegular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
-  src: url("../fonts/ApercuRegular.woff2") format("woff2"), url("../fonts/ApercuRegular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Apercu-Bold";
-  font-weight: 700;
+  src: url("./../../fonts/ApercuBold.woff") format("woff"), url("./../../fonts/ApercuBold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
-  src: url("../fonts/ApercuBold.woff2") format("woff2"), url("../fonts/ApercuBold.woff") format("woff");
 }
 
 html {
@@ -2558,6 +2558,26 @@ body {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  pointer-events: none;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+body.show::after {
+  background-color: rgba(21, 26, 52, 0.8);
 }
 
 * {
@@ -2979,7 +2999,7 @@ a:not([href]) {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .service__slider {
     margin-left: 176px;
     margin-right: 143px;
@@ -3111,6 +3131,30 @@ a:not([href]) {
   }
 }
 
+@media (min-width: 1280px) {
+  .projects .project__photo {
+    position: relative;
+  }
+  .projects .project__photo::before {
+    content: "";
+    position: absolute;
+    background-image: url("./../../img/zoom.svg");
+    background-position: center;
+    background-size: 36px 24px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    width: 36px;
+    height: 24px;
+    left: 50%;
+    margin-left: -18px;
+    top: 50%;
+    margin-top: -12px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+}
+
 .projects__slider {
   margin-top: 43px;
   position: relative;
@@ -3137,6 +3181,7 @@ a:not([href]) {
 .projects__slider .swiper-slide {
   width: 300px;
   padding-left: 17px;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -3150,6 +3195,10 @@ a:not([href]) {
     width: 33%;
     padding-left: 0;
   }
+}
+
+.projects__slider .swiper-slide:hover .project__photo::before {
+  opacity: 1;
 }
 
 .projects__slider .swiper-slide h3 {
@@ -3936,6 +3985,7 @@ a:not([href]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Apercu-Regular", "Arial", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -3957,6 +4007,12 @@ a:not([href]) {
 .header__link {
   margin-left: 51px;
   padding-top: 3px;
+}
+
+@media (max-width: 413px) {
+  .header__link {
+    margin-left: 20px;
+  }
 }
 
 .header__link--phone {
@@ -4048,9 +4104,20 @@ a:not([href]) {
   height: 100vh;
   top: 0;
   background-color: #ffffff;
-  z-index: 100;
+  z-index: 100000;
   text-align: center;
-  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  pointer-events: none;
+}
+
+@media (min-width: 1280px) {
+  .popup {
+    background-color: transparent;
+  }
 }
 
 .popup--show {
@@ -4061,13 +4128,14 @@ a:not([href]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  pointer-events: unset;
 }
 
-@media (min-width: 1280px) {
-  .popup {
-    background-color: rgba(21, 26, 52, 0.8);
-    z-index: 100000;
-  }
+.popup--show .popup-container {
+  opacity: 1;
 }
 
 .popup .popup-container {
@@ -4080,6 +4148,8 @@ a:not([href]) {
           flex-direction: column;
   width: 100%;
   height: 100vh;
+  position: relative;
+  z-index: 1000000;
 }
 
 @media (min-width: 1280px) {
@@ -4098,6 +4168,7 @@ a:not([href]) {
 .popup .swiper-slide {
   width: 100%;
   padding: 0 17px;
+  cursor: auto;
 }
 
 @media (min-width: 768px) {
@@ -4211,6 +4282,12 @@ a:not([href]) {
           transform: rotate(-45deg);
   top: 25px;
   left: 11px;
+}
+
+@media (min-width: 1280px) {
+  .popup__close {
+    z-index: 10000;
+  }
 }
 
 .projects__slider--popup {

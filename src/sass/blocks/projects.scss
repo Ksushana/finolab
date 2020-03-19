@@ -20,6 +20,30 @@
       line-height: 37px;
     }
   }
+
+  .project__photo {
+    @include desktop {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./../../img/zoom.svg");
+        background-position: center;
+        background-size: 36px 24px;
+        background-repeat: no-repeat;
+        z-index: 1000;
+        width: 36px;
+        height: 24px;
+        left: 50%;
+        margin-left: -18px;
+        top: 50%;
+        margin-top: -12px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
+  }
 }
 
 .projects__slider {
@@ -45,6 +69,7 @@
   .swiper-slide {
     width: 300px;
     padding-left: 17px;
+    cursor: pointer;
 
     @include laptop {
       padding-right: 17px;
@@ -53,6 +78,14 @@
     @include desktop {
       width: 33%;
       padding-left: 0;
+    }
+
+    &:hover {
+      .project__photo {
+        &::before {
+          opacity: 1;
+        }
+      }
     }
 
     h3 {

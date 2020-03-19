@@ -1,2 +1,17 @@
-@include font-face("Apercu-Regular", "ApercuRegular", 400);
-@include font-face("Apercu-Bold", "ApercuBold", 700);
+@font-face {
+  font-family: "Apercu-Regular";
+
+  src: url("./../../fonts/ApercuRegular.woff") format("woff"),
+    /* Modern Browsers */ url("./../fonts/ApercuRegular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Apercu-Bold";
+
+  src: url("./../../fonts/ApercuBold.woff") format("woff"),
+    /* Modern Browsers */ url("./../../fonts/ApercuBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

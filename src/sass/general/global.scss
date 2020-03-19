@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 
   @include text-main;
-  font-family: $font-family;
+  font-family: "Apercu-Regular", "Arial", sans-serif;
   font-weight: 400;
   color: $color-black;
   background-color: $color-white;
@@ -33,6 +33,26 @@ body {
   overflow-x: hidden;
 
   box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    transition: background-color 0.5s;
+    pointer-events: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &.show {
+    &::after {
+      background-color: rgba(21, 26, 52, 0.8);
+    }
+  }
 }
 
 * {
@@ -67,6 +87,5 @@ a {
 }
 
 .container {
-  // padding: 10px 15px 10px 16px;
   position: relative;
 }
