@@ -42,7 +42,7 @@
     font-size: 20px;
     line-height: 26px;
     font-weight: bold;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.3px;
     display: flex !important;
     flex-direction: column;
     border-top: none;
@@ -78,7 +78,7 @@
       font-size: 16px;
       line-height: 26px;
       opacity: 0.4;
-      letter-spacing: -0.3px;
+      // letter-spacing: -0.3px;
       color: #000000;
 
       @include laptop {
@@ -163,14 +163,14 @@
       padding-top: 4px !important;
       padding-left: 42px !important;
       padding-right: 26px !important;
-      letter-spacing: -0.1px;
+      // letter-spacing: -0.1px;
     }
 
     @include laptop {
       padding-top: 4px !important;
       padding-left: 41px !important;
       padding-right: 41px !important;
-      letter-spacing: -0.1px;
+      // letter-spacing: -0.1px;
     }
 
     @include desktop {
@@ -178,7 +178,7 @@
       padding-top: 4px !important;
       padding-left: 35px !important;
       padding-right: 129px !important;
-      letter-spacing: -0.1px;
+      // letter-spacing: -0.1px;
     }
 
     p {
