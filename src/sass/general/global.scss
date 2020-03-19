@@ -26,6 +26,7 @@ body {
 
   @include text-main;
   font-family: "Apercu-Regular", "Arial", sans-serif;
+  // font-family: inherit;
   font-weight: 400;
   color: $color-black;
   background-color: $color-white;

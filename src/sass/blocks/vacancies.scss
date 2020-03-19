@@ -45,6 +45,9 @@
     letter-spacing: -0.4px;
     display: flex !important;
     flex-direction: column;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 
     @include tablet {
       display: flex !important;
@@ -134,8 +137,8 @@
   }
 
   div {
-    border: 0.5px solid #f5f5f5;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
+    border: none;
+    box-shadow: 0 11px 21px rgba(0, 0, 0, 0.08);
     outline: none;
     width: auto;
     margin: 0 3%;
