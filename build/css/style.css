@@ -3637,6 +3637,13 @@ h4 {
   }
 }
 
+@media (min-width: 1280px) {
+  .media .swiper-slide p {
+    min-height: 195px;
+    max-height: 195px;
+  }
+}
+
 .media .swiper-slide a {
   display: inline-block;
   width: 30px;
