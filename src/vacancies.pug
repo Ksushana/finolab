@@ -9,15 +9,15 @@ html( lang="ru" )
     meta( charset="UTF-8" )
     title #{mainTitle} !{title && "| " + title}
     meta( name="viewport" content="width=device-width, initial-scale=1.0" )
-    link( rel="preload" href="fonts/ApercuBold.woff2" as="font" type="font/woff2" crossorigin )
-    link( rel="preload" href="fonts/ApercuRegular.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/ApercuProBold.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/ApercuProRegular.woff2" as="font" type="font/woff2" crossorigin )
     link( rel="stylesheet" href="css/style.min.css" )
 
   body
     header.header
       a.header__logo(href="index.html" ): +svg( "logo", 144, 24 )
       +link-text( "Вакансии", "vacancies.html", "header__link" )
-      a.header__link.header__link--phone(href="#") Связаться с нами
+      a.header__link.header__link--phone(href="index.html#form") Связаться с нами
         +svg( "phone", 24, 27 )
 
     main
