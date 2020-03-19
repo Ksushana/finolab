@@ -50,21 +50,21 @@
       display: flex !important;
       flex-direction: column;
       margin: 22px 5% 0 !important;
-      padding-top: 21px !important;
-      padding-bottom: 27px !important;
+      padding-top: 25px !important;
+      padding-bottom: 25px !important;
     }
 
     @include laptop {
       flex-direction: row;
       margin: 27px 5% 0 !important;
-      padding-top: 27px !important;
+      padding-top: 26px !important;
       padding-bottom: 26px !important;
     }
 
     @include desktop {
       margin: 27px 14% 0 !important;
-      padding-top: 31px !important;
-      padding-bottom: 22px !important;
+      padding-top: 26px !important;
+      padding-bottom: 26px !important;
       padding-left: 3% !important;
       padding-right: 15% !important;
     }
@@ -73,9 +73,10 @@
       font-weight: normal;
       display: inline-block;
       font-size: 16px;
-      line-height: 24px;
+      line-height: 26px;
       opacity: 0.4;
       letter-spacing: -0.3px;
+      color: #000000;
 
       @include laptop {
         margin-left: auto;
@@ -119,11 +120,12 @@
     transform: rotate(45deg);
     transition: transform 0.5s;
     right: 22px;
-    top: 40px;
+    top: 50%;
+    margin-top: -5px;
 
     @include tablet {
       right: 43px;
-      top: 33px;
+      // top: 33px;
     }
 
     &.ui-icon-triangle-1-s {
@@ -152,6 +154,20 @@
 
     @include tablet {
       margin: 0 5%;
+    }
+
+    @include tablet {
+      padding-top: 4px !important;
+      padding-left: 42px !important;
+      padding-right: 26px !important;
+      letter-spacing: -0.1px;
+    }
+
+    @include laptop {
+      padding-top: 4px !important;
+      padding-left: 41px !important;
+      padding-right: 41px !important;
+      letter-spacing: -0.1px;
     }
 
     @include desktop {
@@ -209,12 +225,15 @@
 
     .button {
       width: 100%;
-      margin-bottom: 10px;
-      @include desktop {
+      margin-bottom: 20px;
+
+      @include tablet {
         margin-top: 25px;
-        padding: 16px 29px;
+        padding: 16px 2px;
         width: 23%;
         margin-bottom: 36px;
+        margin-bottom: 36px;
+        text-align: center;
       }
     }
   }

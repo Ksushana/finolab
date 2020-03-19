@@ -44,6 +44,15 @@
     left: 181px;
   }
 
+  @include mobile-only {
+    width: 290px;
+    padding: 8px 50px 8px 10px;
+
+    &::after {
+      left: 135px;
+    }
+  }
+
   h2 {
     font-size: 19px;
     line-height: 24px;
@@ -170,6 +179,12 @@
     border-radius: 4px;
     padding: 12px 16px;
     outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @include tablet {
       margin: 8px 5%;
