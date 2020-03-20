@@ -15,8 +15,8 @@
     return window.matchMedia(`(max-width: ${LAPTOP}px)`).matches;
   };
 
-  window.isLaptopMin = function() {
-    return window.matchMedia(`(min-width: ${TABLET + 1}px)`).matches;
+  window.isTabletMin = function() {
+    return window.matchMedia(`(min-width: ${MOBILE + 1}px)`).matches;
   };
 
   window.isDesktop = function() {

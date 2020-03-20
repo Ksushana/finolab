@@ -10304,8 +10304,8 @@ $(document).ready(function() {
     return window.matchMedia(`(max-width: ${LAPTOP}px)`).matches;
   };
 
-  window.isLaptopMin = function() {
-    return window.matchMedia(`(min-width: ${TABLET + 1}px)`).matches;
+  window.isTabletMin = function() {
+    return window.matchMedia(`(min-width: ${MOBILE + 1}px)`).matches;
   };
 
   window.isDesktop = function() {
@@ -10506,7 +10506,7 @@ $(function() {
     ".service__slider .swiper-container"
   );
 
-  if (serviceSlider && !window.isLaptopMin()) {
+  if (serviceSlider && !window.isTabletMin()) {
     let serviceSwiperSlider = new Swiper(serviceSlider, {
       loop: true,
       breakpointsInverse: true,

@@ -19,7 +19,7 @@
   }
 
   .swiper-wrapper {
-    @include laptop {
+    @include tablet {
       flex-wrap: wrap;
     }
   }
@@ -119,6 +119,8 @@
     width: 100%;
     order: 3;
     padding-top: 38px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   @include laptop {
@@ -185,9 +187,9 @@
     //   width: 331px;
     // }
 
-    @include laptop {
+    @include tablet {
       padding-left: 0;
-      width: 48%;
+      width: 47%;
       margin-right: 15px;
       margin-bottom: 30px;
       padding-right: 10px;
