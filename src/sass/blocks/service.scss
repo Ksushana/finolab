@@ -174,8 +174,13 @@
     @include desktop {
       padding-left: 0;
       width: 30.7%;
-      margin-right: 25px;
+      margin-right: 15px;
       margin-bottom: 30px;
+      padding-right: 10px;
+    }
+
+    @include big-desktop {
+      padding-right: 5%;
     }
   }
 
