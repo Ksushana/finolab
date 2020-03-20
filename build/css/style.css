@@ -3254,10 +3254,12 @@ h4 {
   margin: 4px;
   width: 7px;
   height: 7px;
+  outline: none;
 }
 
 .projects__slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
+  background: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -3797,6 +3799,7 @@ h4 {
   margin: 4px;
   width: 7px;
   height: 7px;
+  outline: none;
 }
 
 .media__slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
