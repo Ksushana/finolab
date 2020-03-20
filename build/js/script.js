@@ -10530,7 +10530,7 @@ $(function() {
       slidesPerView: "auto",
       spaceBetween: 17,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination--pr",
         type: "bullets",
         clickable: true
       },
@@ -10557,16 +10557,12 @@ $(function() {
 
   if (mediaSlider) {
     let mediaSwiperSlider = new Swiper(mediaSlider, {
-      // navigation: {
-      //   nextEl: ".feedback__slider-arrow--next",
-      //   prevEl: ".feedback__slider-arrow--prev"
-      // },
       loop: true,
       breakpointsInverse: true,
       slidesPerView: "auto",
       spaceBetween: 16,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination--media",
         type: "bullets",
         clickable: true
       },

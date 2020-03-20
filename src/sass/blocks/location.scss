@@ -86,11 +86,16 @@
 
     &:nth-of-type(2) {
       &::after {
-        width: 17px;
+        width: 15px;
         height: 17px;
         background-image: url("./../img/phone.svg");
-        top: 1px;
+        top: 4px;
         left: 0;
+
+        @include tablet {
+          width: 17px;
+          top: 2px;
+        }
       }
     }
 
@@ -101,6 +106,11 @@
         background-image: url("./../img/mail.svg");
         top: 3px;
         left: 0;
+
+        @include tablet {
+          width: 17px;
+          top: 3px;
+        }
       }
     }
 
@@ -139,7 +149,11 @@
     line-height: 46px;
     text-align: center;
     // letter-spacing: -0.6px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
 
     @include laptop {
       text-align: left;
@@ -151,15 +165,18 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     margin: 0 3.5% 23px;
     // letter-spacing: -0.1px;
+    text-align: center;
 
     @include tablet {
+      font-size: 16px;
       text-align: center;
       width: 66%;
       margin: 0 auto 15px;
+      text-align: left;
     }
 
     @include laptop {
