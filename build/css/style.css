@@ -3638,7 +3638,7 @@ h4 {
 @media (min-width: 768px) {
   .media {
     padding-top: 4px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 }
 
@@ -3706,7 +3706,6 @@ h4 {
   min-height: 176px;
   font-size: 15px;
   line-height: 24px;
-  margin-left: 15px;
   margin-bottom: 30px;
   text-overflow: ellipsis;
   min-height: 175px;
@@ -3809,7 +3808,7 @@ h4 {
   opacity: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .media__slider .swiper-pagination {
     display: none;
   }
@@ -3852,7 +3851,7 @@ h4 {
   .media__slider-arrow--prev {
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
-    left: -30px;
+    left: -50px;
   }
   .media__slider-arrow--prev::before {
     top: 21px;

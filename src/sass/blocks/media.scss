@@ -4,7 +4,7 @@
 
   @include tablet {
     padding-top: 4px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 
   @include desktop {
@@ -56,7 +56,7 @@
       min-height: 176px;
       font-size: 15px;
       line-height: 24px;
-      margin-left: 15px;
+      // margin-left: 15px;
       margin-bottom: 30px;
       text-overflow: ellipsis;
       min-height: 175px;
@@ -80,6 +80,7 @@
         padding: 15px 16px;
         min-height: 195px;
         max-height: 195px;
+
         &::before {
           left: 20%;
         }
@@ -90,6 +91,7 @@
       }
 
       @include desktop {
+        // margin-left: 15px;
         min-height: 195px;
         max-height: 195px;
       }
@@ -147,7 +149,7 @@
       }
     }
 
-    @include tablet {
+    @include desktop {
       display: none;
     }
   }
@@ -190,7 +192,7 @@
 
       &--prev {
         transform: rotate(225deg);
-        left: -30px;
+        left: -50px;
         &::before {
           top: 21px;
         }

@@ -10566,6 +10566,7 @@ $(function() {
       breakpointsInverse: true,
       slidesPerView: "auto",
       spaceBetween: 16,
+      centeredSlides: true,
       pagination: {
         el: ".swiper-pagination--media",
         type: "bullets",
