@@ -87,7 +87,11 @@
     font-size: 25px;
     line-height: 32px;
     // letter-spacing: -0.8px;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
 
     @include desktop {
       font-size: 31px;
@@ -97,10 +101,14 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     // letter-spacing: -0.3px;
     margin-top: 18px;
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }
 
@@ -139,9 +147,13 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     margin-top: 7px;
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 
   .service__pic {
@@ -158,8 +170,8 @@
   }
 
   .swiper-slide {
-    width: 325px;
-    padding-left: 17px;
+    width: 280px;
+    padding-left: 13px;
 
     @include tablet {
       width: 245px;
@@ -173,7 +185,7 @@
 
     @include desktop {
       padding-left: 0;
-      width: 30.7%;
+      width: 48%;
       margin-right: 15px;
       margin-bottom: 30px;
       padding-right: 10px;

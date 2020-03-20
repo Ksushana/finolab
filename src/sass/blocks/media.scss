@@ -34,6 +34,8 @@
   .swiper-slide {
     width: 305px;
     padding-top: 26px;
+    display: flex;
+    flex-direction: column;
 
     p {
       background: #ffffff;
@@ -42,17 +44,17 @@
       box-sizing: border-box;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
       border-radius: 16px;
-      padding: 15px 16px;
+      padding: 15px 20px 15px 13px;
       position: relative;
       z-index: 2;
       background-color: $color-white;
       min-height: 176px;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 24px;
       margin-left: 15px;
       text-overflow: ellipsis;
-      min-height: 195px;
-      max-height: 195px;
+      min-height: 175px;
+      max-height: 175px;
 
       &::before {
         content: "";
@@ -64,6 +66,17 @@
         width: 20px;
         height: 30px;
         bottom: -17px;
+        left: calc(50% - 10px);
+      }
+
+      @include tablet {
+        font-size: 16px;
+        padding: 15px 16px;
+        min-height: 195px;
+        max-height: 195px;
+        &::before {
+          left: 20%;
+        }
       }
 
       @include laptop {
@@ -98,8 +111,11 @@
 
     img,
     svg {
-      margin-left: 15px;
-      margin-top: 10px;
+      margin: 0 auto;
+      @include tablet {
+        margin-left: 15px;
+        margin-top: 10px;
+      }
     }
   }
 }

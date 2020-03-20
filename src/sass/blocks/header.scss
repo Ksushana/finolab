@@ -1,5 +1,5 @@
 .header {
-  padding: 27px 3.9% 15px;
+  padding: 27px 3.9% 20px;
   display: flex;
 
   @include tablet {
@@ -16,11 +16,16 @@
 }
 
 .header__link {
-  margin-left: 51px;
+  margin-left: 26px;
   padding-top: 3px;
+  font-size: 18px;
 
   @include mobile-only {
-    margin-left: 20px;
+    // margin-left: 20px;
+  }
+
+  @include tablet {
+    font-size: 20px;
   }
 
   &--phone {
@@ -41,6 +46,6 @@
 
   svg {
     width: 20px;
-    height: 24px;
+    height: 18px;
   }
 }

@@ -75,11 +75,15 @@
     span {
       font-weight: normal;
       display: inline-block;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 26px;
       opacity: 0.4;
       // letter-spacing: -0.3px;
       color: #000000;
+
+      @include tablet {
+        font-size: 16px;
+      }
 
       @include laptop {
         margin-left: auto;

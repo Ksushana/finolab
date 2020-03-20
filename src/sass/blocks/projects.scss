@@ -1,10 +1,14 @@
 .projects {
   background-color: $color-bg-blue-bright;
-  padding-top: 41px;
-  padding-bottom: 57px;
+  padding-top: 50px;
+  padding-bottom: 109px;
   color: $color-white;
   text-align: center;
   // padding: 41px 20px 57px;
+
+  @include tablet {
+    padding-bottom: 57px;
+  }
 
   @include desktop {
     padding: 41px 174px 63px;
@@ -109,6 +113,24 @@
     img {
       width: 100%;
     }
+  }
+
+  .swiper-pagination {
+    width: 100%;
+    margin-top: 14px;
+
+    .swiper-pagination-bullet {
+      background: #151a34;
+      opacity: 0.4;
+      backdrop-filter: blur(54.3656px);
+      margin: 4px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 

@@ -12,6 +12,11 @@
     padding-top: 74px;
   }
 
+  .intro__block {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
   svg {
     width: 97%;
     height: auto;
@@ -53,12 +58,13 @@
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     text-align: center;
     margin-top: 26px;
 
     @include tablet {
+      font-size: 20px;
       margin-top: 26px;
     }
 

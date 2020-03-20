@@ -30,6 +30,11 @@
       breakpointsInverse: true,
       slidesPerView: "auto",
       spaceBetween: 17,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+      },
       breakpoints: {
         1024: {
           slidesPerView: 3,
