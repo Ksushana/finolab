@@ -3,7 +3,7 @@
     ".service__slider .swiper-container"
   );
 
-  if (serviceSlider && !window.isDesktop()) {
+  if (serviceSlider && !window.isLaptopMin()) {
     let serviceSwiperSlider = new Swiper(serviceSlider, {
       loop: true,
       breakpointsInverse: true,
