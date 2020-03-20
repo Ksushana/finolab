@@ -4444,6 +4444,7 @@ h4 {
   right: 20px;
   top: 20px;
   cursor: pointer;
+  z-index: 2000;
 }
 
 .popup__close::before {
