@@ -7,6 +7,10 @@
   // padding: 41px 20px 57px;
 
   @include tablet {
+    padding-bottom: 70px;
+  }
+
+  @include laptop {
     padding-bottom: 57px;
   }
 
@@ -134,7 +138,7 @@
       }
     }
 
-    @include tablet {
+    @include desktop {
       display: none;
     }
   }

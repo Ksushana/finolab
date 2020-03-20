@@ -3124,6 +3124,12 @@ h4 {
 
 @media (min-width: 768px) {
   .projects {
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects {
     padding-bottom: 57px;
   }
 }
@@ -3259,7 +3265,7 @@ h4 {
   background: #ffffff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .projects__slider .swiper-pagination {
     display: none;
   }
@@ -4366,7 +4372,7 @@ h4 {
 
 @media (min-width: 1024px) {
   .popup .swiper-slide img {
-    max-height: 68vh;
+    max-height: 64vh;
     width: auto !important;
   }
 }
