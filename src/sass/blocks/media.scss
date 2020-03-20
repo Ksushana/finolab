@@ -1,9 +1,10 @@
 .media {
   padding-top: 17px;
-  padding-bottom: 50px;
+  padding-bottom: 120px;
 
   @include tablet {
     padding-top: 4px;
+    padding-bottom: 50px;
   }
 
   @include desktop {
@@ -52,6 +53,7 @@
       font-size: 15px;
       line-height: 24px;
       margin-left: 15px;
+      margin-bottom: 25px;
       text-overflow: ellipsis;
       min-height: 175px;
       max-height: 175px;
@@ -122,6 +124,28 @@
 
 .media__slider {
   position: relative;
+
+  .swiper-pagination {
+    width: 100%;
+    margin-top: 31px;
+
+    .swiper-pagination-bullet {
+      background: #151a34;
+      opacity: 0.4;
+      backdrop-filter: blur(54.3656px);
+      margin: 4px;
+      width: 7px;
+      height: 7px;
+
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .media__slider-arrow {
