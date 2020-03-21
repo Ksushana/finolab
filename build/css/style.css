@@ -3209,8 +3209,9 @@ h4 {
   cursor: pointer;
 }
 
-@media (min-width: 970px) {
+@media (min-width: 768px) {
   .projects__slider .swiper-slide {
+    padding-left: 17px;
     padding-right: 17px;
   }
 }

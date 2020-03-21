@@ -10562,6 +10562,9 @@ $(function() {
       clickable: true
     },
     breakpoints: {
+      768: {
+        centeredSlides: false
+      },
       970: {
         slidesPerView: 3,
         spaceBetween: 0,
@@ -10621,6 +10624,9 @@ $(function() {
       clickable: true
     },
     breakpoints: {
+      768: {
+        centeredSlides: false
+      },
       1000: {
         slidesPerView: 3,
         spaceBetween: 0,
