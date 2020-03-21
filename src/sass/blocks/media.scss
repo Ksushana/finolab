@@ -24,11 +24,14 @@
 
   .swiper-container {
     @include tablet {
-      padding-left: 18px;
+      padding-left: 9px;
+      padding-right: 9px;
     }
 
     @include desktop {
       padding-right: 18px;
+      padding-left: 18px;
+      // padding-right: 0;
     }
   }
 
@@ -41,6 +44,15 @@
     padding-top: 26px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 100px) {
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+
+    &.adaptive {
+      width: 32%;
+    }
 
     p {
       background: #ffffff;

@@ -58,6 +58,10 @@
   margin-top: 43px;
   position: relative;
 
+  // .swiper-wrapper {
+  //   justify-content: space-around;
+  // }
+
   &--popup {
     padding-top: 25px;
 
@@ -79,8 +83,11 @@
     padding-left: 17px;
     cursor: pointer;
 
-    @include laptop {
+    @media (min-width: 970px) {
       padding-right: 17px;
+    }
+
+    @include laptop {
     }
 
     @include desktop {

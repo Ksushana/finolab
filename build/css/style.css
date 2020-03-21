@@ -2598,6 +2598,11 @@ h4 {
   position: relative;
 }
 
+.space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 /* Blocks */
 .intro {
   background-color: #e3f0f5;
@@ -3205,7 +3210,7 @@ h4 {
   cursor: pointer;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 970px) {
   .projects__slider .swiper-slide {
     padding-right: 17px;
   }
@@ -3663,13 +3668,15 @@ h4 {
 
 @media (min-width: 768px) {
   .media .swiper-container {
-    padding-left: 18px;
+    padding-left: 9px;
+    padding-right: 9px;
   }
 }
 
 @media (min-width: 1280px) {
   .media .swiper-container {
     padding-right: 18px;
+    padding-left: 18px;
   }
 }
 
@@ -3689,6 +3696,17 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 100px) {
+  .media .swiper-slide {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}
+
+.media .swiper-slide.adaptive {
+  width: 32%;
 }
 
 .media .swiper-slide p {
