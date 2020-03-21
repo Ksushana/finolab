@@ -80,8 +80,11 @@
 
   .swiper-slide {
     width: 300px;
-    padding-left: 17px;
+    // padding-left: 17px;
     cursor: pointer;
+
+    @include laptop {
+    }
 
     @media (min-width: 970px) {
       padding-right: 17px;
