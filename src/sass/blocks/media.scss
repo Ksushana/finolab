@@ -87,11 +87,14 @@
         left: calc(50% - 10px);
       }
 
+      @media (min-width: 414px) {
+        min-height: 195px;
+        max-height: 195px;
+      }
+
       @include tablet {
         font-size: 16px;
         padding: 15px 16px;
-        min-height: 195px;
-        max-height: 195px;
 
         &::before {
           left: 20%;

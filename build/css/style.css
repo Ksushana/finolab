@@ -3209,7 +3209,7 @@ h4 {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 414px) {
   .projects__slider .swiper-slide {
     padding-left: 17px;
     padding-right: 17px;
@@ -3743,12 +3743,17 @@ h4 {
   left: calc(50% - 10px);
 }
 
+@media (min-width: 414px) {
+  .media .swiper-slide p {
+    min-height: 195px;
+    max-height: 195px;
+  }
+}
+
 @media (min-width: 768px) {
   .media .swiper-slide p {
     font-size: 16px;
     padding: 15px 16px;
-    min-height: 195px;
-    max-height: 195px;
   }
   .media .swiper-slide p::before {
     left: 20%;

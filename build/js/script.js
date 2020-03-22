@@ -10375,7 +10375,7 @@ $(function() {
         iconImageSize: [0, 0],
         // Смещение левого верхнего угла иконки относительно
         // её "ножки" (точки привязки).
-        iconImageOffset: [0, -234],
+        iconImageOffset: [-5, -234],
         // Смещение слоя с содержимым относительно слоя с картинкой.
         iconContentOffset: [0, 20],
         // Макет содержимого.
@@ -10562,7 +10562,7 @@ $(function() {
       clickable: true
     },
     breakpoints: {
-      768: {
+      414: {
         centeredSlides: false
       },
       970: {
@@ -10624,7 +10624,7 @@ $(function() {
       clickable: true
     },
     breakpoints: {
-      768: {
+      414: {
         centeredSlides: false
       },
       1000: {

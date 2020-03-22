@@ -83,12 +83,14 @@
     // padding-left: 17px;
     cursor: pointer;
 
-    @include tablet {
+    // @include tablet {
+    //   padding-left: 17px;
+    //   padding-right: 17px;
+    // }
+
+    @media (min-width: 414px) {
       padding-left: 17px;
       padding-right: 17px;
-    }
-
-    @media (min-width: 970px) {
     }
 
     @include laptop {

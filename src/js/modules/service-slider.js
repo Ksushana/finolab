@@ -59,7 +59,7 @@
       clickable: true
     },
     breakpoints: {
-      768: {
+      414: {
         centeredSlides: false
       },
       970: {
@@ -121,7 +121,7 @@
       clickable: true
     },
     breakpoints: {
-      768: {
+      414: {
         centeredSlides: false
       },
       1000: {
